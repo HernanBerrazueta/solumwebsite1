@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 import ImageText from "../../components/homepage/ImageText/ImageText";
-import TextImage from "../../components/homepage/TextImage/TextImage";
-import PromiseComponent from "../../components/about/promise/Promise";
+// import TextImage from "../../components/homepage/TextImage/TextImage";
+// import PromiseComponent from "../../components/about/promise/Promise";
 import TeamComponent from "../../components/about/team/Team";
 import Carousel from "../../components/homepage/carousel/Carousel";
 import {
-  Container,
+  // Container,
   TopContainer,
 } from "../../components/services/Services.styled";
 import {

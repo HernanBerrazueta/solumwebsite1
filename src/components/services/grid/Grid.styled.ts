@@ -3,14 +3,14 @@ import { Box } from "@mui/material";
 import theme from "../../../theme";
 import { device } from "../../../utils/device";
 
-export const GridItem = styled(Box)<{ ishovered: boolean }>`
-  background-color: ${({ ishovered }) =>
-    ishovered ? "#f0ecf3" : theme.palette.primary.main};
+export const GridItem = styled(Box)<{ $ishovered: string }>`
+  background-color: ${({ $ishovered }) =>
+    $ishovered ? "#f0ecf3" : theme.palette.primary.main};
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ ishovered }) =>
-    ishovered ? theme.palette.primary.main : "#f0ecf3"};
+  color: ${({ $ishovered }) =>
+    $ishovered ? theme.palette.primary.main : "#f0ecf3"};
   position: relative;
   width: 100%;
   padding-bottom: 100%;

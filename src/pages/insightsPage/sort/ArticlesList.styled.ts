@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import theme from "../../../theme";
 
 export const ArticlesWrapper = styled.div`
@@ -39,11 +38,11 @@ export const ButtonGroup = styled.div`
   margin-bottom: 20px;
 `;
 
-export const Button = styled(Link)<{ $active: boolean }>`
+export const Button = styled.div<{ $active: boolean }>`
   padding: 10px 20px;
   color: ${theme.palette.primary.main};
   cursor: pointer;
-
+  background-color: transparent;
   border-radius: 0px;
   border-bottom: ${({ $active }) =>
     $active ? `2px solid ${theme.palette.primary.main}` : "none"};
@@ -55,6 +54,9 @@ export const Button = styled(Link)<{ $active: boolean }>`
   &:focus:active {
     outline: none;
   }
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const Pagination = styled.div`
@@ -63,7 +65,12 @@ export const Pagination = styled.div`
   margin-top: 20px;
 `;
 
-export const PageButton = styled.button<{ disabled?: boolean }>`
+interface PageButtonProps {
+  disabled?: boolean;
+  $active?: boolean;
+}
+
+export const PageButton = styled.button<PageButtonProps>`
   border-radius: 0;
   padding: 10px;
   font-size: 24px;

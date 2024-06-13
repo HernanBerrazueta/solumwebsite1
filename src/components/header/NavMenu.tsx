@@ -20,7 +20,8 @@ const NavMenu: React.FC = () => {
   const { isMobile } = useMatchMedia();
   const location = useLocation();
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
-  const [showInsightsDropdown, setShowInsightsDropdown] = useState(false);
+  // const [setShowInsightsDropdown] = useState(false);
+  // const [showInsightsDropdown, setShowInsightsDropdown] = useState(false);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const { lockScroll, unlockScroll } = useScrollLock();
 
@@ -43,13 +44,13 @@ const NavMenu: React.FC = () => {
     setShowServicesDropdown(false);
   };
 
-  const handleInsightsMouseEnter = () => {
-    setShowInsightsDropdown(true);
-  };
+  // const handleInsightsMouseEnter = () => {
+  //   setShowInsightsDropdown(true);
+  // };
 
-  const handleInsightsMouseLeave = () => {
-    setShowInsightsDropdown(false);
-  };
+  // const handleInsightsMouseLeave = () => {
+  //   setShowInsightsDropdown(false);
+  // };
 
   return (
     <>
@@ -104,8 +105,8 @@ const NavMenu: React.FC = () => {
               )}
             </div>
             <div
-              onMouseEnter={handleInsightsMouseEnter}
-              onMouseLeave={handleInsightsMouseLeave}
+            // onMouseEnter={handleInsightsMouseEnter}
+            // onMouseLeave={handleInsightsMouseLeave}
             >
               <NavLinkStyled
                 to="/insights/publications"

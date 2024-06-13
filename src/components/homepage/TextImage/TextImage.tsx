@@ -10,16 +10,13 @@ const TextImage: React.FC = () => {
   const isHomePage = location.pathname === "/";
   const isAboutPage = location.pathname === "/about";
 
-  let imageIndex: number;
+  let imageIndex: number = 2;
 
   if (isHomePage) {
     imageIndex = 0;
   } else if (isAboutPage) {
     imageIndex = 1;
   }
-  // else {
-  //   imageIndex = 2;
-  // }
 
   return (
     <Container>

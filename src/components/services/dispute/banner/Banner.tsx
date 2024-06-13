@@ -8,7 +8,7 @@ interface BannerProps {
   }[];
 }
 
-const Banner: React.FC = ({ images }: BannerProps) => {
+const Banner: React.FC<BannerProps> = ({ images }) => {
   return (
     <BannerWrapperContainer>
       <BannerWrapper>

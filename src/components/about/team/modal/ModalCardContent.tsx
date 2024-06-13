@@ -41,20 +41,18 @@ const ModalCardContent: React.FC<{
             <CardPosition>{teamMember.position}</CardPosition>
           </CardPersonalDataColumns>
           <CardPersonalData>
-            <CardPersonalLinks as="a" href="tel:+447 (0) 207869230">
+            <CardPersonalLinks href={`tel:${teamMember.phone}`}>
               <CardContactDetails>{teamMember.phone}</CardContactDetails>
               <MdPhone fontSize="small" />
             </CardPersonalLinks>
             <CardPersonalLinks
-              as="a"
-              href="mailto:email@example.com"
+              href={`mailto:${teamMember.email}`}
               target="_blank"
             >
               <CardContactDetails>{teamMember.email}</CardContactDetails>
               <MailOutlineIcon fontSize="small" />
             </CardPersonalLinks>
             <CardPersonalLinkedIn
-              as="a"
               href={teamMember.linkedIn}
               target="_blank"
               rel="noopener noreferrer"

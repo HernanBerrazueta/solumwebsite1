@@ -13,7 +13,7 @@ import placeholder_6 from "../../../assets/images/consultancyPage/consultancy.we
 
 interface Article {
   id: number;
-  categories: ("Surveys" | "Whitepapers" | "Books" | "Whitepapers")[];
+  categories: ("Surveys" | "Whitepapers" | "Books")[];
   title: string;
   description: string;
   image: string;
@@ -104,7 +104,6 @@ export const articles: Article[] = [
     image: placeholder_4,
     description: "Whitepapers",
   },
-  ,
   {
     id: 113,
     categories: ["Whitepapers"],

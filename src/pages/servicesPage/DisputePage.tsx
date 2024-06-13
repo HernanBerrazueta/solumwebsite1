@@ -6,7 +6,6 @@ import Grid from "../../components/services/grid/Grid";
 import Carousel from "../../components/homepage/carousel/Carousel";
 import Banner from "../../components/services/dispute/banner/Banner";
 import ButtonComponent from "../../common/Button";
-import { Title } from "../../components/homepage/carousel/Carousel.styled";
 import {
   disputePageCarouselTitle,
   disputePageCarouselData,

@@ -16,6 +16,14 @@ import {
 } from "./ArticlesList.styled";
 import FlashSurveys from "./FlashSurveys";
 
+interface Article {
+  id: number;
+  categories: ("Surveys" | "Whitepapers" | "Books")[];
+  title: string;
+  description: string;
+  image: string;
+}
+
 const ArticleList: React.FC = () => {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [filter, setFilter] = useState<string>("All");
@@ -34,8 +42,10 @@ const ArticleList: React.FC = () => {
     }
   }, [currentPage]);
 
-  const filteredArticles = articles.filter(
-    (article) => filter === "All" || article.categories.includes(filter as any)
+  const filteredArticles: Article[] = articles.filter(
+    (article) =>
+      filter === "All" ||
+      article.categories.includes(filter as "Surveys" | "Whitepapers" | "Books")
   );
 
   const startIndex = (currentPage - 1) * articlesPerPage;

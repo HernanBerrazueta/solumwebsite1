@@ -5,7 +5,7 @@ import Policies from "./Policies";
 import useMatchMedia from "../../../hooks/useMediaQuery";
 
 const Copyright: React.FC = () => {
-  const { isMobile, isTablet, isLaptop } = useMatchMedia();
+  const { isMobile } = useMatchMedia();
 
   return (
     <>

@@ -22,7 +22,7 @@ const SquareGrid: React.FC<SquareGridProps> = ({
     <GridItem
       onMouseEnter={() => setHoveredIndex(index)}
       onMouseLeave={() => setHoveredIndex(null)}
-      ishovered={isHovered ? "true" : "false"}
+      $ishovered={isHovered ? "true" : "false"}
     >
       <GridItemContent>
         <strong>

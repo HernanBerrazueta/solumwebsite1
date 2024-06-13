@@ -1,7 +1,6 @@
 import React from "react";
 // import NavigationSharpIcon from "@mui/icons-material/NavigationSharp";
 import { NavigationSharpIconStyled, ScrollBtnStyled } from "./ScrollBtn.styled";
-import theme from "../../../theme";
 
 interface ClickProp {
   handleScrollToTop: () => void;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import theme from "../../../../theme";
 import { device } from "../../../../utils/device";
@@ -12,8 +11,6 @@ export const BackDrop = styled.div`
   left: 0;
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.5);
-  // background-color: #30235366;
-  // backdrop-filter: blur(12px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,20 +23,17 @@ export const CloseBtn = styled(Button)`
   z-index: 3;
 `;
 
-export const Card = styled.div`
+export const Card = styled.div<{ open: boolean }>`
   position: fixed;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -30%);
-
   border-radius: 15px;
   background-color: #fff;
   color: ${theme.palette.primary.main};
-
   max-width: 90vw;
   max-height: 90vh;
   overflow: auto;
-
   max-width: 552px;
   height: auto;
 
@@ -82,7 +76,6 @@ export const CardImage = styled.img`
   width: 100%;
   filter: grayscale(100%);
   border-top-left-radius: 15px;
-  // border-top-right-radius: 15px;
 `;
 
 export const CardContentWrapper = styled.div`
@@ -100,16 +93,18 @@ export const CardPersonalData = styled.div`
   width: 50%;
   gap: 10px;
 `;
+
 export const CardPersonalDataColumns = styled(CardPersonalData)`
   justify-content: space-around;
   color: ${theme.palette.primary.main};
 `;
 
-export const CardPersonalLinks = styled(Link)`
+export const CardPersonalLinks = styled.a`
   display: flex;
   justify-content: flex-end;
   gap: 15px;
 `;
+
 export const CardPersonalLinkedIn = styled(CardPersonalLinks)`
   align-items: center;
 `;
@@ -134,7 +129,7 @@ export const CardPosition = styled(CardName)`
   color: ${theme.palette.primary.main};
   font-size: 20px;
 `;
+
 export const CardContactDetails = styled(CardName)`
   font-size: 13px;
 `;
-//Gareth's email is too long for 16px
