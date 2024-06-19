@@ -1,9 +1,6 @@
 import Image1 from "../../../assets/images/disputePage/dispute.webp";
-// import Image1 from "../../../assets/images/disputePage/dispute1.webp";
 import Image2 from "../../../assets/images/homePage/homepageSection.webp";
-// import Image2 from "../../../assets/images/homePage/homepageSection1.webp";
 import Image3 from "../../../assets/images/consultancyPage/consultancy.webp";
-// import Image3 from "../../../assets/images/consultancyPage/consultancy1.webp";
 
 export const insightsData = [
   {

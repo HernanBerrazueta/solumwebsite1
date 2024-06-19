@@ -1,13 +1,8 @@
 import HomeHero from "../../../assets/images/homePage/homepageSection.webp";
-// import HomeHero from "../../../assets/images/homePage/homepageSection1.webp";
 import ConsultancyHero from "../../../assets/images/consultancyPage/consultancy.webp";
-// import ConsultancyHero from "../../../assets/images/consultancyPage/consultancy1.webp";
 import DisputeHero from "../../../assets/images/disputePage/dispute.webp";
-// import DisputeHero from "../../../assets/images/disputePage/dispute1.webp";
 import InsightsHero from "../../../assets/images/insightsPage/insights.webp";
-// import InsightsHero from "../../../assets/images/insightsPage/insights1.webp";
 import AboutHero from "../../../assets/images/aboutPage/AboutHero.webp";
-// import AboutHero from "../../../assets/images/aboutPage/AboutHero1.webp";
 
 interface Data {
   src: string;

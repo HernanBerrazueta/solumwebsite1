@@ -1,7 +1,5 @@
 import Image from "../../../assets/images/homePage/homepageHero.webp";
-// import Image from "../../../assets/images/homePage/homepageHero1.webp";
 import AboutBottom from "../../../assets/images/aboutPage/AboutHero.webp";
-// import AboutBottom from "../../../assets/images/aboutPage/AboutHero1.webp";
 
 interface Data {
   src: string;
