@@ -54,6 +54,8 @@ export const MainTextStyled = styled.p`
 `;
 
 export const TextStyled = styled(MainTextStyled)`
+  display: inline-block;
+  background-color: #fff;
   color: ${theme.palette.primary.main};
   width: 100%;
   max-width: 100%;
@@ -78,6 +80,7 @@ export const Container = styled.div`
 `;
 
 export const TitleStyled = styled(MainTitleStyled)`
+  background-color: #fff;
   color: ${theme.palette.primary.main};
   text-align: left;
   margin: 40px 0 0;
@@ -85,6 +88,7 @@ export const TitleStyled = styled(MainTitleStyled)`
 `;
 
 export const Header = styled.h1`
+  background-color: #fff;
   color: ${theme.palette.primary.main};
   text-align: left;
 
@@ -94,25 +98,30 @@ export const Header = styled.h1`
 `;
 
 export const SubHeader = styled.h2`
+  background-color: #fff;
   color: ${theme.palette.primary.main};
   margin-top: 50px;
   text-align: left;
 `;
 
 export const CookiesList = styled.ul`
+  background-color: #fff;
   list-style-type: initial;
   padding-left: 50px;
 `;
 export const PrivacyList = styled.ol`
+  background-color: #fff;
   list-style-type: auto;
   padding-left: 20px;
 `;
 export const AbcList = styled.ol`
+  background-color: #fff;
   list-style: lower-latin;
   padding-left: 40px;
 `;
 
 export const LiStyled = styled.li`
+  background-color: #fff;
   color: ${theme.palette.primary.main};
   width: 100%;
   font-weight: 500;
@@ -123,5 +132,6 @@ export const LiStyled = styled.li`
 `;
 
 export const LinkStyled = styled(Link)`
+  background-color: #fff;
   text-decoration: underline;
 `;

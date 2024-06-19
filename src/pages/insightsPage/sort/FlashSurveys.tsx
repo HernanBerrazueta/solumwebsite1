@@ -2,7 +2,7 @@ import React from "react";
 import ButtonComponent from "../../../common/Button";
 import { buttonText } from "../../../components/homepage/contact/data";
 import { flashSurveys } from "./articles";
-import { FlashTitle, FlashWrapper } from "./ArticlesList.styled";
+import { FlashWrapper } from "./ArticlesList.styled";
 
 interface FlashSurveys {
   title: string;
@@ -14,9 +14,17 @@ interface FlashSurveys {
 const FlashSurveys: React.FC = () => {
   return (
     <FlashWrapper>
-      <FlashTitle>Our Flash Survey Programme</FlashTitle>
+      <div
+        style={{
+          display: "inline-block",
+          paddingBottom: 30,
+          backgroundColor: "#fff",
+        }}
+      >
+        <h2>Our Flash Survey Programme</h2>
+      </div>
       {flashSurveys.map((text) => (
-        <p>{text}</p>
+        <p style={{ backgroundColor: "#fff" }}>{text}</p>
       ))}
       <ButtonComponent text={buttonText} to="/contact" />
     </FlashWrapper>

@@ -110,10 +110,14 @@ export const NavList = styled.div`
 `;
 
 export const NavLinkStyled = styled(NavLink)<NavLinkProps>`
+  background-color: #fff;
   color: ${theme.palette.primary.main};
   text-decoration: none;
   // margin-right: 70px;
-  font-weight: ${({ active }) => (active ? "bold" : "normal")};
+  font-family: ${({ active }) =>
+    active
+      ? "CircularXXWeb-Bold, sans-serif"
+      : "CircularXXWeb-Regular, sans-serif"};
 
   &:hover {
     color: ${theme.palette.primary.main};

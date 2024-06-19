@@ -75,18 +75,20 @@ interface TitleProps {
 }
 
 export const Title = styled.h2<TitleProps>`
+  display: inline-block;
   text-align: left;
   color: ${theme.palette.primary.main};
   margin: 50px 0;
   padding-left: 70px;
   font-size: 32px;
+  background-color: #fff;
 
   @media ${device.mobileOnly} {
     padding-left: 20px;
   }
 
-  ${(props) =>
-    props.formTitle &&
+  ${({ formTitle }) =>
+    formTitle &&
     css`
       padding-left: 0;
       margin: 60px 0 20px 0;

@@ -3,7 +3,7 @@ import theme from "../../../theme";
 import { device } from "../../../utils/device";
 
 export const ArticlesWrapper = styled.div`
-  padding: 50px 0;
+  padding: 0 0 50px;
 
   @media ${device.mobileOnly} {
     padding: 0 0 50px;
@@ -11,6 +11,7 @@ export const ArticlesWrapper = styled.div`
 `;
 
 export const ArticleGrid = styled.div`
+  background-color: #fff;
   display: grid;
   gap: 20px;
   margin-top: 20px;
@@ -29,6 +30,10 @@ export const ArticleGrid = styled.div`
 export const ArticleCard = styled.div`
   overflow: hidden;
   cursor: pointer;
+
+  @media ${device.mobileOnly} {
+    margin-bottom: 30px;
+  }
 `;
 
 export const ArticleImage = styled.img`
@@ -39,6 +44,7 @@ export const ArticleImage = styled.img`
 export const ArticleTitle = styled.h3`
   color: #000;
   margin: 10px;
+  background-color: #fff;
 
   @media ${device.mobileOnly} {
     margin: 0;
@@ -116,8 +122,4 @@ export const FlashWrapper = styled.div`
   @media ${device.mobileOnly} {
     padding: 40px 0;
   }
-`;
-
-export const FlashTitle = styled.h2`
-  margin-bottom: 30px;
 `;

@@ -32,10 +32,14 @@ const PromiseComponent: React.FC = () => {
             color: theme.palette.primary.main,
           }}
         >
-          <h2 style={{ fontSize: 32, marginBottom: 50 }}>
+          <h2
+            style={{ fontSize: 32, marginBottom: 50, backgroundColor: "#fff" }}
+          >
             {promiseData[imageIndex].title}
           </h2>
-          <p style={{ fontSize: 22 }}>{promiseData[imageIndex].description}</p>
+          <p style={{ fontSize: 22, backgroundColor: "#fff" }}>
+            {promiseData[imageIndex].description}
+          </p>
         </Grid>
       </GridPromiseWrapper>
     </>

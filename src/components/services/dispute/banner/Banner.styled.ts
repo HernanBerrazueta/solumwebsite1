@@ -25,6 +25,7 @@ export const ImageStyled = styled.img`
 `;
 
 export const BannerWrapper = styled.div`
+  background-color: #fff;
   max-width: 100%;
   width: 80vw;
   display: flex;

@@ -1,9 +1,9 @@
 import { createGlobalStyle } from "styled-components";
-import homeImage from "../assets/images/squiggles/Homepage Graphic.svg";
-import aboutImage from "../assets/images/squiggles/About Us Graphic.svg";
-import consultancyImage from "../assets/images/squiggles/Consultancy Graphic.svg";
-import disputeServicesImage from "../assets/images/squiggles/Dispute Services Graphic.svg";
-import insightsImage from "../assets/images/squiggles/Insights Graphic.svg";
+import homeImage from "/squiggles/Homepage Graphic.svg";
+import aboutImage from "/squiggles/About Us Graphic.svg";
+import consultancyImage from "/squiggles/Consultancy Graphic.svg";
+import disputeServicesImage from "/squiggles/Dispute Services Graphic.svg";
+import insightsImage from "/squiggles/Insights Graphic.svg";
 
 interface GlobalStylesProps {
   path: string;
@@ -20,13 +20,13 @@ const imageMap: { [key: string]: string } = {
   "/diversity_inclusion": aboutImage,
   "/consultancy": consultancyImage,
   "/dispute-services": disputeServicesImage,
-  "/insights/publications": insightsImage,
+  "/insights/publications": aboutImage,
   "/insights/news": insightsImage,
 };
 
 const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   @font-face {
-    font-family: "CircularXXWeb-Regular";
+    font-family: "CircularXXWeb-Regular", sans-serif;
     src: url("/src/assets/fonts/CircularXXWeb-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
@@ -37,7 +37,7 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   }
 
   body {
-    font-family: "CircularXXWeb-Medium", sans-serif;
+    font-family: "CircularXXWeb-Regular", sans-serif;
     font-weight: normal;
     font-style: normal;
     margin: 0;

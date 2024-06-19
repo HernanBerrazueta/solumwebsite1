@@ -48,7 +48,7 @@ export const Container = styled.div`
 
   h1,
   p {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     line-height: 1.4;
   }
 

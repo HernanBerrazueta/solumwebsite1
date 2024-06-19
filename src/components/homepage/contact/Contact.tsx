@@ -6,7 +6,14 @@ const Contact = () => {
   return (
     <ContactContainer>
       <Title>{contactData.title}</Title>
-      <Description>{contactData.description}</Description>
+      <div
+        style={{
+          paddingTop: 50,
+          backgroundColor: "#fff",
+        }}
+      >
+        <Description>{contactData.description}</Description>
+      </div>
       <ButtonComponent text={buttonText} to="/contact" />
     </ContactContainer>
   );

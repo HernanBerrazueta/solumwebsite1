@@ -18,13 +18,14 @@ export const ContactContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin-bottom: 10px;
+  padding-top: 10px;
+  background-color: #fff;
   font-size: 32px;
   color: ${theme.palette.primary.main};
 `;
 
 export const Description = styled.p`
-  margin-top: 50px;
+  padding-bottom: 10px;
   max-width: 100vw;
   color: ${theme.palette.primary.main};
   font-size: 22px;

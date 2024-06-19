@@ -4,7 +4,6 @@ import { device } from "../../../utils/device";
 
 export const Container = styled.div`
   display: flex;
-  // background-color: ${theme.palette.text.primary};
   color: ${theme.palette.primary.main};
   width: 100%;
   position: relative;
@@ -31,7 +30,7 @@ export const Container = styled.div`
 
   h1,
   p {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     line-height: 1.4;
     text-align: left;
   }
@@ -61,33 +60,36 @@ export const TextColumn = styled.div`
 
   h1,
   p {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     line-height: 1.4;
     text-align: left;
   }
 `;
 
 export const FlexWrap = styled.div`
-  // display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 1;
   flex-wrap: wrap;
   align-content: center;
 
-  @media ${device.mobile} {
+  @media ${device.mobileOnly} {
     margin-bottom: 40px;
   }
 `;
 
 export const TitleStyled = styled.h1`
+  font-family: "CircularXXWeb-Bold", sans-serif;
+  display: inline-block;
   font-size: 32px;
-  margin-bottom: 20px;
   text-align: left !important;
+  background-color: #fff;
 `;
 
 export const TextStyled = styled.p`
   font-size: 22px;
+  background-color: #fff;
 
   @media ${device.smallTablet} {
     font-size: 20px;

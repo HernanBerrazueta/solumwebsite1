@@ -57,7 +57,9 @@ const Form: React.FC = () => {
 
   return (
     <Container>
-      <Title formTitle>Get in Touch</Title>
+      <Title formTitle style={{ maxWidth: 300 }}>
+        Get in Touch
+      </Title>
       <form onSubmit={handleSubmit}>
         <Container>
           <Input
