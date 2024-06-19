@@ -15,28 +15,41 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  margin: 40px 70px;
+  padding: 40px 70px;
   font-size: 32px;
   color: ${theme.palette.primary.main};
+
+  @media ${device.mobileOnly} {
+    padding: 40px 20px;
+  }
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 22px;
+  padding: 0 20px;
 
   @media ${device.mobileOnly} {
     flex-direction: column;
     gap: 30px;
   }
+  @media ${device.smallTablet} {
+    padding: 0 20px;
+  }
 `;
 
 export const ImageContainer = styled.div`
   margin-bottom: 20px;
-  padding: 0 70px;
 
-  @media ${device.mobileOnly} {
+  @media ${device.mobile} {
     padding: 0 20px;
+  }
+  @media ${device.smallTablet} {
+    padding: 10px;
+  }
+  @media ${device.desktop} {
+    padding: 0 50px;
   }
 `;
 
@@ -75,7 +88,7 @@ export const ButtonContainer = styled.div<{
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
-  margin-top: 90px;
+  margin-top: 40px;
 
   @media ${device.mobileOnly} {
     margin-bottom: 30px;
@@ -87,18 +100,6 @@ export const ButtonContainer = styled.div<{
     css`
       margin-top: 20px;
       justify-content: left;
-    `}
-
-  ${(props) =>
-    props.isinsightspage &&
-    css`
-      justify-content: left;
-      margin-top: -70px;
-      margin-bottom: 0px;
-
-      @media ${device.mobileOnly} {
-        margin-top: -10px;
-      }
     `}
 
   & > Button {

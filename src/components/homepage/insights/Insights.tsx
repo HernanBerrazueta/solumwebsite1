@@ -16,12 +16,12 @@ import useMatchMedia from "../../../hooks/useMediaQuery";
 const Insights: React.FC = () => {
   const { isMobile } = useMatchMedia();
   const background: string =
-    "linear-gradient(180deg, rgba(255, 255, 255, 1) 30%, rgba(238, 236, 243, 1) 30%)";
+    "linear-gradient(180deg, transparent 30%, rgba(238, 236, 243, 1) 30%)";
 
   return (
     <Container
       style={{
-        background: isMobile ? "fff" : background,
+        background: isMobile ? "transparent" : background,
         paddingBottom: isMobile ? 0 : 50,
       }}
     >

@@ -66,7 +66,15 @@ export const Container = styled.div`
   align-items: flex-start;
   justify-content: center;
 
-  padding: 100px 250px;
+  @media ${device.mobileOnly} {
+    padding: 40px 20px;
+  }
+  @media ${device.smallTablet} {
+    padding: 50px;
+  }
+  @media ${device.desktop} {
+    padding: 100px 250px;
+  }
 `;
 
 export const TitleStyled = styled(MainTitleStyled)`
@@ -79,6 +87,10 @@ export const TitleStyled = styled(MainTitleStyled)`
 export const Header = styled.h1`
   color: ${theme.palette.primary.main};
   text-align: left;
+
+  @media ${device.mobileOnly} {
+    font-size: 30px;
+  }
 `;
 
 export const SubHeader = styled.h2`

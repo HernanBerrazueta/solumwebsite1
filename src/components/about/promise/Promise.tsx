@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Grid } from "@mui/material";
 import theme from "../../../theme";
 import { promiseData } from "./data";
+import { GridPromiseWrapper } from "./Promise.styled";
 
 const PromiseComponent: React.FC = () => {
   const location = useLocation();
@@ -22,19 +23,7 @@ const PromiseComponent: React.FC = () => {
 
   return (
     <>
-      <Grid
-        style={{
-          backgroundColor: theme.palette.text.primary,
-          padding: "100px 0px",
-          justifyContent: "center",
-          flexDirection: "row",
-          flexWrap: "nowrap",
-          alignItems: "center",
-          gap: 35,
-        }}
-        item
-        xs={12}
-      >
+      <GridPromiseWrapper item xs={12}>
         <Grid
           style={{
             display: "flex",
@@ -48,7 +37,7 @@ const PromiseComponent: React.FC = () => {
           </h2>
           <p style={{ fontSize: 22 }}>{promiseData[imageIndex].description}</p>
         </Grid>
-      </Grid>
+      </GridPromiseWrapper>
     </>
   );
 };

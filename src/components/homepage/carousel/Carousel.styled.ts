@@ -3,7 +3,7 @@ import theme from "../../../theme";
 import { device } from "../../../utils/device";
 
 export const StyledCarousel = styled.div`
-  background-color: ${theme.palette.text.primary};
+  // background-color: ${theme.palette.text.primary};
   max-width: 100vw;
 `;
 
@@ -19,6 +19,9 @@ export const CarouselWrapper = styled.div`
     @media ${device.mobileOnly} {
       margin-left: 0px;
     }
+    @media ${device.smallTablet} {
+      margin-left: 30px;
+    }
   }
 
   .splide__arrow--next {
@@ -26,6 +29,9 @@ export const CarouselWrapper = styled.div`
 
     @media ${device.mobileOnly} {
       margin-right: 0px;
+    }
+    @media ${device.smallTablet} {
+      margin-right: 30px;
     }
   }
 `;
@@ -45,6 +51,10 @@ export const SlideContent = styled.div`
   @media ${device.mobileOnly} {
     font-size: 12px;
     padding: 20px 60px;
+  }
+  @media ${device.smallTablet} {
+    padding: 10px 110px;
+    font-size: 22px;
   }
 
   & > :nth-child(2) {

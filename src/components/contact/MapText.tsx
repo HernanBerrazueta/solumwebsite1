@@ -6,17 +6,10 @@ import Form from "../../components/contact/Form";
 import {
   Container,
   Content,
-  IconsColumn,
   TextColumn,
 } from "../homepage/ImageText/ImageText.styled";
 import { imageData } from "../homepage/ImageText/data";
 import { FadeInAnimation } from "../animations/animations";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faPhone,
-  faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons";
 
 const MapText: React.FC = () => {
   const location = useLocation();
@@ -44,27 +37,6 @@ const MapText: React.FC = () => {
         <Form />
       </div>
       <Content>
-        <IconsColumn>
-          <div>
-            <FadeInAnimation $delay="0.1s">
-              <a href="mailto:email@example.com" target="_blank">
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-            </FadeInAnimation>
-          </div>
-          <div>
-            <FadeInAnimation $delay="0.2s">
-              <a href="tel:+447 (0) 207869230">
-                <FontAwesomeIcon icon={faPhone} />
-              </a>
-            </FadeInAnimation>
-          </div>
-          <div>
-            <FadeInAnimation $delay="0.3s">
-              <FontAwesomeIcon icon={faMapMarkerAlt} />
-            </FadeInAnimation>
-          </div>
-        </IconsColumn>
         <TextColumn>
           <FadeInAnimation $delay="0s">
             <Text
@@ -72,6 +44,7 @@ const MapText: React.FC = () => {
               subtitle={imageData[imageIndex].subtitle}
               text={imageData[imageIndex].text}
               subText={formatSubText(imageData[imageIndex].subText)}
+              showIcons={isContactPage} // Pass a prop to indicate when to show icons
             />
           </FadeInAnimation>
         </TextColumn>

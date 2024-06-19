@@ -4,14 +4,14 @@ import { device } from "../../../utils/device";
 
 export const Container = styled.div`
   display: flex;
-  background-color: ${theme.palette.text.primary};
+  // background-color: ${theme.palette.text.primary};
   color: ${theme.palette.primary.main};
   width: 100%;
   position: relative;
   z-index: 1;
 
   & > :first-child {
-    margin: 10px 30px 0px 0px;
+    margin: 10px 30px 0px 40px;
 
     @media ${device.mobileOnly} {
       margin: 0;
@@ -19,11 +19,9 @@ export const Container = styled.div`
   }
 
   & > :last-child {
-    padding-top: 30px;
-    padding-left: 30px;
-
+    margin-right: 30px;
     @media ${device.mobileOnly} {
-      padding-left: 0px;
+      padding-top: 40px;
     }
   }
 
@@ -35,11 +33,7 @@ export const Container = styled.div`
   p {
     margin-bottom: 30px;
     line-height: 1.4;
-    text-align: justify;
-
-    @media ${device.mobileOnly} {
-      text-align: left;
-    }
+    text-align: left;
   }
 
   @media ${device.mobileOnly} {
@@ -48,40 +42,17 @@ export const Container = styled.div`
 
   @media ${device.desktop} {
     & > :first-child {
-      width: 55%;
+      width: 60%;
     }
 
     & > :last-child {
-      width: 45%;
-    }
-  }
-
-  @media ${device.ultraLarge} {
-    & > :first-child {
-      width: 57%;
-    }
-
-    & > :last-child {
-      width: 43%;
+      width: 40%;
     }
   }
 `;
 
 export const Content = styled.div`
   display: flex;
-`;
-
-export const IconsColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 65px;
-
-  div {
-    margin-bottom: 13px;
-    font-size: 1.3rem;
-    color: ${theme.palette.primary.main};
-  }
 `;
 
 export const TextColumn = styled.div`
@@ -92,25 +63,43 @@ export const TextColumn = styled.div`
   p {
     margin-bottom: 30px;
     line-height: 1.4;
-    text-align: justify;
-
-    @media ${device.mobileOnly} {
-      text-align: left;
-    }
+    text-align: left;
   }
 `;
 
 export const FlexWrap = styled.div`
-  display: flex;
+  // display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: center;
   z-index: 1;
+  flex-wrap: wrap;
+  align-content: center;
+
+  @media ${device.mobile} {
+    margin-bottom: 40px;
+  }
+`;
+
+export const TitleStyled = styled.h1`
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: left !important;
+`;
+
+export const TextStyled = styled.p`
+  font-size: 22px;
+
+  @media ${device.smallTablet} {
+    font-size: 20px;
+  }
+  @media ${device.tablet} {
+    font-size: 22px;
+  }
 `;
 
 export const ImageStyled = styled.img`
   object-fit: cover;
-  max-width: 55%;
+  max-width: 60%;
 
   @media ${device.mobileOnly} {
     max-width: 100%;

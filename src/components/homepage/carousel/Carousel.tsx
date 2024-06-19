@@ -32,7 +32,7 @@ const Carousel: React.FC<Data> = ({ data, title }) => {
   const splideOptions = {
     type: "fade",
     rewind: false,
-    height: "300px",
+    height: "380px",
     gap: "10px",
     pagination: false,
     arrows: data.length > 1,

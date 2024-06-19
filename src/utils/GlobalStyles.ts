@@ -1,28 +1,64 @@
 import { createGlobalStyle } from "styled-components";
+import homeImage from "../assets/images/squiggles/Homepage Graphic.svg";
+import aboutImage from "../assets/images/squiggles/About Us Graphic.svg";
+import consultancyImage from "../assets/images/squiggles/Consultancy Graphic.svg";
+import disputeServicesImage from "../assets/images/squiggles/Dispute Services Graphic.svg";
+import insightsImage from "../assets/images/squiggles/Insights Graphic.svg";
 
-const GlobalStyles = createGlobalStyle`
+interface GlobalStylesProps {
+  path: string;
+}
+
+const imageMap: { [key: string]: string } = {
+  "/": homeImage,
+  "/about": aboutImage,
+  "/contact": aboutImage,
+  "/privacy_policy": aboutImage,
+  "/data_protection": aboutImage,
+  "/cookies": aboutImage,
+  "/esg_commitment": aboutImage,
+  "/diversity_inclusion": aboutImage,
+  "/consultancy": consultancyImage,
+  "/dispute-services": disputeServicesImage,
+  "/insights/publications": insightsImage,
+  "/insights/news": insightsImage,
+};
+
+const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
+  @font-face {
+    font-family: "CircularXXWeb-Regular";
+    src: url("/src/assets/fonts/CircularXXWeb-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
   * {
     box-sizing: border-box;
-    font-family: "CircularXXWeb-Regular", sans-serif;;
-    src: url("/src/assets/fonts/CircularXXWeb-Regular.woff") format("woff");
   }
+
   body {
+    font-family: "CircularXXWeb-Medium", sans-serif;
     font-weight: normal;
     font-style: normal;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #fff;
-
+    background-image: ${(props) => `url(${imageMap[props.path] || "none"})`};
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top center;
   }
 
-  h1,h2,h3,h4,h5,h6,p {
+  h1, h2, h3, h4, h5, h6, p {
     margin: 0;
   }
 
   p {
     margin: 0;
     padding: 0;
+    font-family: "CircularXXWeb-Regular", sans-serif;
   }
 
   a {

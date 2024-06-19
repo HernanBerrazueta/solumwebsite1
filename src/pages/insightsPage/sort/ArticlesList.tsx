@@ -22,6 +22,7 @@ interface Article {
   title: string;
   description: string;
   image: string;
+  pdf: string;
 }
 
 const ArticleList: React.FC = () => {
@@ -61,6 +62,10 @@ const ArticleList: React.FC = () => {
     setCurrentPage(1);
   };
 
+  const handleArticleClick = (pdf: string) => {
+    window.open(pdf, "_blank");
+  };
+
   return (
     <ArticlesWrapper ref={buttonGroupRef}>
       <ButtonGroup>
@@ -86,7 +91,10 @@ const ArticleList: React.FC = () => {
         <>
           <ArticleGrid>
             {currentArticles.map((article) => (
-              <ArticleCard key={article.id}>
+              <ArticleCard
+                key={article.id}
+                onClick={() => handleArticleClick(article.pdf)}
+              >
                 <ArticleImage src={article.image} alt={article.title} />
                 <ArticleTitle>{article.title}</ArticleTitle>
                 <ArticleDescription>{article.description}</ArticleDescription>

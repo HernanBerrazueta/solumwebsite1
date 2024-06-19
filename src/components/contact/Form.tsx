@@ -17,17 +17,13 @@ const Form: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Validate inputs here
     if (query.trim() === "" || email.trim() === "" || subject.trim() === "") {
       alert("Please fill in all fields.");
       return;
     }
     if (!isValidEmail(email)) {
       setEmailError(true);
-      return;
     }
-    // If all validations pass, proceed with form submission
-    // Add your form submission logic here
   };
 
   const isValidEmail = (email: string) => {

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Footer from "../../../components/footer/Footer";
 import { Container, Header, TextStyled } from "../cookies/Cookies.styled";
+import protectionPolicy from "../../../assets/dataProtectionPolicy/Solum Financial Data Protection Policy 2024.pdf";
+// const protectionPolicy = require("../../../assets/dataProtectionPolicy/Solum Financial Data Protection Policy 2024.pdf");
 
 const DataProtection: React.FC = () => {
   useEffect(() => {
@@ -14,7 +16,7 @@ const DataProtection: React.FC = () => {
         <TextStyled>
           Please click{" "}
           <a
-            href="https://www.xplainfinancial.com/wp-content/uploads/2022/02/Data-Protection-Policy-2022.pdf"
+            href={protectionPolicy}
             target="_blank"
             rel="noreferrer noopener"
             style={{ textDecoration: "underline" }}

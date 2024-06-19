@@ -17,6 +17,7 @@ import {
   MenuToggle,
   SubMenu,
   SubMenuItem,
+  SubMenuListItem,
 } from "./BurgerMenu.styled";
 
 interface BurgerProps {
@@ -32,8 +33,8 @@ const BurgerMenu: React.FC<BurgerProps> = ({
 }) => {
   const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
-  const [showServices, setShowServices] = useState(false);
-  const [showInsights, setShowInsights] = useState(false);
+  const [showServices, setShowServices] = useState(true);
+  const [showInsights, setShowInsights] = useState(true);
 
   const handleClickOutside = useCallback(
     (event: MouseEvent) => {
@@ -109,28 +110,30 @@ const BurgerMenu: React.FC<BurgerProps> = ({
             {label === "Services" && showServices && (
               <SubMenu>
                 {servicesPages.map(({ to, label }) => (
-                  <SubMenuItem
-                    key={label}
-                    to={to}
-                    active={location.pathname === to ? "true" : undefined}
-                    onClick={handleLinkClick}
-                  >
-                    {label}
-                  </SubMenuItem>
+                  <SubMenuListItem key={label}>
+                    <SubMenuItem
+                      to={to}
+                      active={location.pathname === to ? "true" : undefined}
+                      onClick={handleLinkClick}
+                    >
+                      {label}
+                    </SubMenuItem>
+                  </SubMenuListItem>
                 ))}
               </SubMenu>
             )}
             {label === "Insights" && showInsights && (
               <SubMenu>
                 {insightsPages.map(({ to, label }) => (
-                  <SubMenuItem
-                    key={label}
-                    to={to}
-                    active={location.pathname === to ? "true" : undefined}
-                    onClick={handleLinkClick}
-                  >
-                    {label}
-                  </SubMenuItem>
+                  <SubMenuListItem key={label}>
+                    <SubMenuItem
+                      to={to}
+                      active={location.pathname === to ? "true" : undefined}
+                      onClick={handleLinkClick}
+                    >
+                      {label}
+                    </SubMenuItem>
+                  </SubMenuListItem>
                 ))}
               </SubMenu>
             )}

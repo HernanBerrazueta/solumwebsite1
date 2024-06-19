@@ -25,9 +25,9 @@ export const MenuToggle = styled.input`
 `;
 
 export const MenuBtn = styled.label`
-  position: fixed;
-  top: 36px;
-  right: 36px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
   width: 26px;
   height: 26px;
   cursor: pointer;
@@ -92,9 +92,20 @@ export const SubMenu = styled.ul`
   padding-top: 10px;
 `;
 
+export const SubMenuListItem = styled.li`
+  position: relative;
+
+  &::before {
+    content: "•";
+    position: absolute;
+    right: 89%;
+    top: 10px;
+  }
+`;
+
 export const SubMenuItem = styled(Link)<{ active?: string }>`
   display: block;
-  padding: 8px 0 8px 35px;
+  padding: 8px 0 8px 55px;
   color: ${theme.palette.primary.main};
   border-bottom: ${({ active }) => (active ? "2px solid #00ff00" : "none")};
   font-size: 18px;

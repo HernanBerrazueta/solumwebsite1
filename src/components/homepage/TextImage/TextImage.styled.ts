@@ -4,16 +4,32 @@ import { device } from "../../../utils/device";
 
 export const Container = styled.div`
   display: flex;
-  background-color: ${theme.palette.text.primary};
+  // background-color: ${theme.palette.text.primary};
   color: ${theme.palette.primary.main};
   width: 100%;
 
   & > :first-child {
     margin: 30px 0 0 0;
+
+    @media ${device.mobileOnly} {
+      margin-bottom: 40px;
+    }
+
+    @media ${device.smallTablet} {
+      margin-left: 40px;
+    }
+
+    @media ${device.desktop} {
+      margin-right: 100px;
+    }
+
+    @media ${device.ultraLarge} {
+      margin-right: 100px;
+    }
   }
 
   & > :last-child {
-    margin-left: 70px;
+    margin: 0 40px 0 30px;
 
     @media ${device.mobileOnly} {
       margin-left: 0px;
@@ -22,20 +38,12 @@ export const Container = styled.div`
 
   h1 {
     font-size: 32px;
-    text-align: justify;
-
-    @media ${device.mobileOnly} {
-      text-align: left;
-    }
+    text-align: left;
   }
 
   p {
     font-size: 22px;
-    text-align: justify;
-
-    @media ${device.mobileOnly} {
-      text-align: left;
-    }
+    text-align: left;
   }
 
   h1,
@@ -50,21 +58,11 @@ export const Container = styled.div`
 
   @media ${device.desktop} {
     & > :first-child {
-      width: 45%;
+      width: 40%;
     }
 
     & > :last-child {
-      width: 55%;
-    }
-  }
-
-  @media ${device.ultraLarge} {
-    & > :first-child {
-      width: 35%;
-    }
-
-    & > :last-child {
-      width: 65%;
+      width: 60%;
     }
   }
 `;

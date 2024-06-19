@@ -5,7 +5,7 @@ import { device } from "../../utils/device";
 export const Container = styled.div<{ formcontainer?: string }>`
   display: flex;
   flex-direction: column;
-  background-color: ${theme.palette.text.primary};
+  // background-color: ${theme.palette.text.primary};
   margin-bottom: 15px;
   color: ${theme.palette.text.primary};
 

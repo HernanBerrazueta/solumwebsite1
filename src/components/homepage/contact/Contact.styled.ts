@@ -4,10 +4,16 @@ import { device } from "../../../utils/device";
 
 export const ContactContainer = styled.div`
   text-align: left;
-  padding: 50px 70px;
 
   @media ${device.mobileOnly} {
     padding: 50px 20px;
+  }
+  @media ${device.smallTablet} {
+    // text-align: justify;
+    padding: 50px 30px;
+  }
+  @media ${device.desktop} {
+    padding: 50px 70px;
   }
 `;
 

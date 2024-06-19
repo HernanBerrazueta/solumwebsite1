@@ -17,6 +17,7 @@ export const TeamGrid = styled(Grid)`
 
   @media ${device.mobileOnly} {
     flex-direction: column;
+    padding: 50px 20px;
   }
 `;
 
@@ -29,6 +30,10 @@ export const BoxItem = styled(Grid)`
   justify-content: center;
   transition: all 0.7s;
   transform: scale(1);
+
+  @media ${device.mobileOnly} {
+    padding: 10px 0;
+  }
 
   &:hover {
     transition: all 0.7s;

@@ -9,7 +9,6 @@ interface NavLinkProps {
 
 export const burgerMenuItems = [
   { to: "", label: "Services" },
-  { to: "https://www.xplainfinancial.com/", label: "Xplain" },
   { to: "", label: "Insights" },
   { to: "/about", label: "About Us" },
   { to: "/contact", label: "Contact Us" },
@@ -17,7 +16,8 @@ export const burgerMenuItems = [
 
 export const servicesPages = [
   { to: "/consultancy", label: "Consultancy" },
-  { to: "/dispute-services", label: "Services" },
+  { to: "/dispute-services", label: "Dispute Services" },
+  { to: "https://www.xplainfinancial.com/", label: "Xplain" },
 ];
 export const insightsPages = [
   { to: "/insights/news", label: "News" },
@@ -25,9 +25,8 @@ export const insightsPages = [
 ];
 
 export const StyledHeader = styled.header`
-  background-color: ${theme.palette.text.primary};
+  // background-color: ${theme.palette.text.primary};
   color: ${theme.palette.primary.main};
-  padding: 50px 70px;
   display: flex;
   align-items: center;
   font-size: 20px;
@@ -35,12 +34,16 @@ export const StyledHeader = styled.header`
   z-index: 1000;
 
   @media ${device.mobileOnly} {
-    position: fixed;
     font-size: 15px;
     padding: 30px 20px;
   }
 
+  @media ${device.smallTablet} {
+    padding: 50px 70px;
+  }
+
   @media ${device.desktop} {
+    padding: 50px 70px;
     font-size: 20px;
   }
 `;

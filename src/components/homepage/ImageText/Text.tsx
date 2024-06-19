@@ -1,29 +1,88 @@
 import React from "react";
+import Button from "@mui/material/Button";
+import { useLocation, Link } from "react-router-dom";
+import { ButtonContainer } from "../../homepage/insights/Insights.styled";
 import { FadeInAnimation } from "../../animations/animations";
-import { FlexWrap } from "./ImageText.styled";
+import { ButtonText } from "../../about/team/Team.styled";
+import { buttonTextInsights } from "../../homepage/contact/data";
+import { FlexWrap, TextStyled, TitleStyled } from "./ImageText.styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface TextProps {
   title: string;
   subtitle: React.ReactNode;
   text: React.ReactNode;
   subText: React.ReactNode;
+  showIcons?: boolean;
 }
 
-const Text: React.FC<TextProps> = ({ title, subtitle, text, subText }) => {
+const Text: React.FC<TextProps> = ({
+  title,
+  subtitle,
+  text,
+  subText,
+  showIcons = false,
+}) => {
+  const location = useLocation();
+  const isContactPage = location.pathname === "/contact";
+
   return (
-    <FlexWrap style={{ zIndex: 1 }}>
+    <FlexWrap>
       <FadeInAnimation $delay="0s">
-        <h1 style={{ marginBottom: "20px", fontSize: 32 }}>{title}</h1>
+        <TitleStyled style={{ maxWidth: 800 }}>{title}</TitleStyled>
       </FadeInAnimation>
       <FadeInAnimation $delay="0.1s">
-        <p style={{ fontSize: 22 }}>{subtitle}</p>
+        <TextStyled
+          style={{ maxWidth: 800, margin: subtitle === "" ? 0 : undefined }}
+        >
+          {showIcons && isContactPage && (
+            <FontAwesomeIcon style={{ marginRight: 10 }} icon={faEnvelope} />
+          )}
+          {subtitle}
+        </TextStyled>
       </FadeInAnimation>
       <FadeInAnimation $delay="0.2s">
-        <p style={{ fontSize: 22 }}>{text}</p>
+        <TextStyled style={{ maxWidth: 800 }}>
+          {showIcons && isContactPage && (
+            <FontAwesomeIcon style={{ marginRight: 5 }} icon={faPhone} />
+          )}{" "}
+          {text}
+        </TextStyled>
       </FadeInAnimation>
       <FadeInAnimation $delay="0.3s">
-        <p style={{ fontSize: 22 }}>{subText}</p>
+        <TextStyled style={{ maxWidth: 800, marginBottom: 0 }}>
+          {showIcons && isContactPage && (
+            <FontAwesomeIcon
+              style={{ marginRight: 15 }}
+              icon={faMapMarkerAlt}
+            />
+          )}
+          {subText}
+        </TextStyled>
       </FadeInAnimation>
+      {isContactPage && (
+        <FadeInAnimation $delay="0.3s">
+          <ButtonContainer formbutton="true">
+            <Link to="/contact">
+              <Button
+                style={{ marginTop: 20 }}
+                variant="contained"
+                color="primary"
+                type="submit"
+              >
+                <ButtonText style={{ minWidth: 90 }}>
+                  {buttonTextInsights}
+                </ButtonText>
+              </Button>
+            </Link>
+          </ButtonContainer>
+        </FadeInAnimation>
+      )}
     </FlexWrap>
   );
 };

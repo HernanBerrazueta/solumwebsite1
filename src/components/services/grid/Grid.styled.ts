@@ -57,15 +57,11 @@ export const GridContainer = styled(Box)`
   }
 
   @media ${device.smallTablet} {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
   @media ${device.tablet} {
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  }
-
-  @media ${device.tabletOnly} {
-    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(218px, 1fr));
   }
 
   @media ${device.desktop} {

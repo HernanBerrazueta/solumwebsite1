@@ -2,12 +2,8 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Image from "./Image";
 import Text from "./Text";
-import { Container, FlexWrap } from "./ImageText.styled";
+import { Container } from "./ImageText.styled";
 import { imageData } from "./data";
-import ButtonComponent from "../../../common/Button";
-import { buttonTextInsights } from "../../../components/homepage/contact/data";
-import { FadeInAnimation } from "../../animations/animations";
-import { ButtonContainer } from "../../homepage/insights/Insights.styled"; // Import the updated styled component
 
 const ImageText: React.FC = () => {
   const location = useLocation();
@@ -41,23 +37,12 @@ const ImageText: React.FC = () => {
   return (
     <Container style={{ height: "100%" }}>
       <Image src={imageData[imageIndex].src} alt={imageData[imageIndex].alt} />
-      <FlexWrap>
-        <FadeInAnimation $delay="0s">
-          <Text
-            title={imageData[imageIndex].title}
-            subtitle={subtitle}
-            text={imageData[imageIndex].text}
-            subText={imageData[imageIndex]?.subText}
-          />
-          {isInsightsPublicationsPage && (
-            <FadeInAnimation $delay="0.3s">
-              <ButtonContainer isinsightspage="true">
-                <ButtonComponent text={buttonTextInsights} to="/contact" />
-              </ButtonContainer>
-            </FadeInAnimation>
-          )}
-        </FadeInAnimation>
-      </FlexWrap>
+      <Text
+        title={imageData[imageIndex].title}
+        subtitle={subtitle}
+        text={imageData[imageIndex].text}
+        subText={imageData[imageIndex]?.subText}
+      />
     </Container>
   );
 };

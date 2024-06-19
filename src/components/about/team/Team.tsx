@@ -25,7 +25,7 @@ interface TeamData {
 }
 
 const TeamComponent: React.FC = () => {
-  const { isMobile } = useMatchMedia();
+  const { isMobile, isTablet } = useMatchMedia();
 
   const [selectedTeamMember, setSelectedTeamMember] = useState<TeamData | null>(
     null
@@ -59,7 +59,7 @@ const TeamComponent: React.FC = () => {
         {team.map((item) => (
           <BoxItem
             item
-            xs={isMobile ? 12 : 3}
+            xs={isMobile ? 12 : isTablet ? 4 : 3}
             key={item.name}
             onClick={() => handleOpenModal(item)}
           >

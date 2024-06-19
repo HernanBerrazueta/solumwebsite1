@@ -69,6 +69,7 @@ export const Card = styled.div<{ open: boolean }>`
   @media ${device.mobileOnly} {
     top: 40%;
     max-height: 70vh;
+    width: 95vw;
   }
 `;
 

@@ -20,7 +20,6 @@ const Squares: React.FC = () => {
         <Column
           key={to}
           $isOdd={index % 2 === 0}
-          // style={{ width: "calc(33vw - 70px)" }}
           onClick={() => handleClick(to)}
         >
           <Link
