@@ -18,6 +18,7 @@ export const ContactContainer = styled.div`
 `;
 
 export const Title = styled.h1`
+  font-family: "CircularXXWeb-Medium", sans-serif;
   padding-top: 10px;
   background-color: #fff;
   font-size: 32px;

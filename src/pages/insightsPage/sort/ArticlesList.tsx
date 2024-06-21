@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Grid } from "@mui/material";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import ArrowBackIosNewSharpIcon from "@mui/icons-material/ArrowBackIosNewSharp";
 import { articles } from "./articles";
@@ -96,8 +97,10 @@ const ArticleList: React.FC = () => {
                 onClick={() => handleArticleClick(article.pdf)}
               >
                 <ArticleImage src={article.image} alt={article.title} />
-                <ArticleTitle>{article.title}</ArticleTitle>
-                <ArticleDescription>{article.description}</ArticleDescription>
+                <Grid>
+                  <ArticleTitle>{article.title}</ArticleTitle>
+                  <ArticleDescription>{article.description}</ArticleDescription>
+                </Grid>
               </ArticleCard>
             ))}
           </ArticleGrid>

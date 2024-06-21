@@ -95,12 +95,14 @@ export const SubMenu = styled.ul`
 export const SubMenuListItem = styled.li`
   position: relative;
 
-  &::before {
-    content: "•";
-    position: absolute;
-    right: 89%;
-    top: 10px;
-  }
+  // ----- Bullet points -----
+
+  // &::before {
+  //   content: "•";
+  //   position: absolute;
+  //   right: 89%;
+  //   top: 10px;
+  // }
 `;
 
 export const SubMenuItem = styled(Link)<{ active?: string }>`

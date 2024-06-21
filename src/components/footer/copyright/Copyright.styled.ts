@@ -47,7 +47,7 @@ export const PoliciesWrapper = styled.div`
 `;
 
 export const PolicyLink = styled(Link)`
-  font-weight: bold;
+  font-family: "CircularXXWeb-Medium", sans-serif;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

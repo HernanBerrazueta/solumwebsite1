@@ -8,7 +8,7 @@ export const FooterContainer = styled.footer`
   text-align: center;
   padding: 80px 20px;
   font-size: 14px;
-  font-weight: bold;
+  font-family: "CircularXXWeb-Medium", sans-serif;
 
   width: 100vw;
 

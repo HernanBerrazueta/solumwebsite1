@@ -38,3 +38,7 @@
   font-family: "CircularXXWeb-Light";
   src: url("CircularXXWeb-Light.woff") format("woff");
 }
+@font-face {
+  font-family: "CircularXXWeb-Medium";
+  src: url("CircularXXWeb-Medium.woff") format("woff");
+}

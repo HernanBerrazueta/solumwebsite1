@@ -33,7 +33,12 @@ const PromiseComponent: React.FC = () => {
           }}
         >
           <h2
-            style={{ fontSize: 32, marginBottom: 50, backgroundColor: "#fff" }}
+            style={{
+              fontSize: 32,
+              marginBottom: 50,
+              backgroundColor: "#fff",
+              fontFamily: "CircularXXWeb-Medium, sans-serif",
+            }}
           >
             {promiseData[imageIndex].title}
           </h2>

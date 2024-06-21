@@ -15,6 +15,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.h2`
+  font-family: "CircularXXWeb-Medium", sans-serif;
   padding: 40px 70px;
   font-size: 32px;
   color: ${theme.palette.primary.main};

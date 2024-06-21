@@ -63,7 +63,7 @@ export const SlideContent = styled.div`
 `;
 
 export const Quote = styled.q`
-  font-weight: bold;
+  font-family: "CircularXXWeb-Medium", sans-serif;
 `;
 
 export const Paragraph = styled.p`
@@ -75,6 +75,7 @@ interface TitleProps {
 }
 
 export const Title = styled.h2<TitleProps>`
+  font-family: "CircularXXWeb-Medium", sans-serif;
   display: inline-block;
   text-align: left;
   color: ${theme.palette.primary.main};

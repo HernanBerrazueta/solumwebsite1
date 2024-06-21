@@ -70,7 +70,10 @@ const NavMenu: React.FC = () => {
               <NavLinkStyled
                 to="/consultancy"
                 active={
-                  location.pathname === "/consultancy" ? "true" : undefined
+                  location.pathname === "/consultancy" ||
+                  location.pathname === "/dispute-services"
+                    ? "true"
+                    : undefined
                 }
               >
                 {location.pathname === "/dispute-services" ? (

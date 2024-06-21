@@ -60,7 +60,7 @@ export const TeamMemberTitle = styled.h2`
 `;
 export const TeamMemberName = styled.h4`
   color: #000;
-  font-weight: bold;
+  font-family: "CircularXXWeb-Medium", sans-serif;
 `;
 
 export const TeamMemberPosition = styled.p`

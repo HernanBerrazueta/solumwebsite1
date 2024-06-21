@@ -13,6 +13,7 @@ export const ArticlesWrapper = styled.div`
 export const ArticleGrid = styled.div`
   background-color: #fff;
   display: grid;
+  justify-items: center;
   gap: 20px;
   margin-top: 20px;
 
@@ -30,21 +31,31 @@ export const ArticleGrid = styled.div`
 export const ArticleCard = styled.div`
   overflow: hidden;
   cursor: pointer;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 40px 40px 0 rgba(0, 0, 0, 0.2);
+  }
 
   @media ${device.mobileOnly} {
-    margin-bottom: 30px;
+    max-width: 260px;
+    margin: 0 auto 30px;
   }
 `;
 
 export const ArticleImage = styled.img`
-  width: 100%;
-  height: auto;
+  border: 0.75px solid #302353;
+  max-height: 360px;
+  width: 260px;
 `;
 
 export const ArticleTitle = styled.h3`
+  padding: 10px;
   color: #000;
-  margin: 10px;
-  background-color: #fff;
+  max-width: 260px;
 
   @media ${device.mobileOnly} {
     margin: 0;
@@ -52,8 +63,9 @@ export const ArticleTitle = styled.h3`
 `;
 
 export const ArticleDescription = styled.p`
-  margin: 10px;
+  padding: 10px;
   color: #000;
+  max-width: 260px;
 
   @media ${device.mobileOnly} {
     margin: 0;
@@ -66,8 +78,10 @@ export const ButtonGroup = styled.div`
   margin-bottom: 20px;
 
   @media ${device.mobileOnly} {
+    background-color: #fff;
     display: block;
     text-align: center;
+    background-color: #fff;
   }
 `;
 

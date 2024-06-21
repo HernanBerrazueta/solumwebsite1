@@ -4,6 +4,11 @@ import aboutImage from "/squiggles/About Us Graphic.svg";
 import consultancyImage from "/squiggles/Consultancy Graphic.svg";
 import disputeServicesImage from "/squiggles/Dispute Services Graphic.svg";
 import insightsImage from "/squiggles/Insights Graphic.svg";
+// import homeImage from "../assets/images/squiggles/Homepage Graphic.svg";
+// import aboutImage from "../assets/images/squiggles/About Us Graphic.svg";
+// import consultancyImage from "../assets/images/squiggles/Consultancy Graphic.svg";
+// import disputeServicesImage from "../assets/images/squiggles/Dispute Services Graphic.svg";
+// import insightsImage from "../assets/images/squiggles/Insights Graphic.svg";
 
 interface GlobalStylesProps {
   path: string;
@@ -12,7 +17,6 @@ interface GlobalStylesProps {
 const imageMap: { [key: string]: string } = {
   "/": homeImage,
   "/about": aboutImage,
-  "/contact": aboutImage,
   "/privacy_policy": aboutImage,
   "/data_protection": aboutImage,
   "/cookies": aboutImage,
@@ -44,11 +48,11 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #fff;
-    background-image: ${(props) => `url(${imageMap[props.path] || "none"})`};
+    background-image: ${({ path }) => `url(${imageMap[path] || "none"})`};
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: top center;
+    background-position: top 130px center;
   }
 
   h1, h2, h3, h4, h5, h6, p {

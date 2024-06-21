@@ -54,14 +54,23 @@ const Text: React.FC<TextProps> = ({
           {text}
         </TextStyled>
       </FadeInAnimation>
-      <FadeInAnimation $delay="0.3s">
-        <TextStyled style={{ maxWidth: 800, paddingBottom: 0 }}>
-          {showIcons && isContactPage && (
-            <FontAwesomeIcon
-              style={{ marginRight: 15 }}
-              icon={faMapMarkerAlt}
-            />
-          )}
+      <FadeInAnimation
+        $delay="0.3s"
+        style={{
+          display: isContactPage ? "flex" : "block",
+          alignItems: isContactPage ? "baseline" : undefined,
+        }}
+      >
+        {showIcons && isContactPage && (
+          <FontAwesomeIcon style={{ marginRight: 15 }} icon={faMapMarkerAlt} />
+        )}
+        <TextStyled
+          style={{
+            maxWidth: 800,
+            paddingBottom: 0,
+            display: isContactPage ? "inline-block" : "block",
+          }}
+        >
           {subText}
         </TextStyled>
       </FadeInAnimation>
