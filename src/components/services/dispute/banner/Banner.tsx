@@ -11,7 +11,7 @@ const Banner: React.FC<BannerProps> = ({ pageType }) => {
   const hasAnimation = pageType === "DisputePage";
 
   return (
-    <BannerWrapperContainer>
+    <BannerWrapperContainer $hasanimation={hasAnimation}>
       <BannerWrapper $hasanimation={hasAnimation}>
         <ImagesSection images={images} hasAnimation={hasAnimation} />
         {hasAnimation && (

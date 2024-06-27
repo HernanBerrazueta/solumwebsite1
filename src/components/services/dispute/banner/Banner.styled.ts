@@ -10,9 +10,12 @@ const swipe = keyframes`
   }
 `;
 
-export const Images = styled.div<{ $hasanimation: boolean }>`
+interface HasAnimationProps {
+  $hasanimation: boolean;
+}
+
+export const Images = styled.div<HasAnimationProps>`
   display: flex;
-  // justify-content: space-evenly;
   align-items: center;
   height: ${({ $hasanimation }) => ($hasanimation ? "120px" : "100%")};
   flex-direction: ${({ $hasanimation }) => ($hasanimation ? "row" : "column")};
@@ -44,14 +47,14 @@ export const Images = styled.div<{ $hasanimation: boolean }>`
         `};
 `;
 
-export const ImageStyled = styled.img<{ $hasanimation: boolean }>`
+export const ImageStyled = styled.img<HasAnimationProps>`
   width: 250px;
   max-height: ${({ $hasanimation }) => ($hasanimation ? "70px" : "85px")};
   object-fit: contain;
   margin: ${({ $hasanimation }) => ($hasanimation ? "0 20px" : "0")};
 `;
 
-export const BannerWrapper = styled.div<{ $hasanimation: boolean }>`
+export const BannerWrapper = styled.div<HasAnimationProps>`
   background-color: #fff;
   max-width: 100%;
   width: ${({ $hasanimation }) => ($hasanimation ? "80vw" : "100%")};
@@ -65,7 +68,7 @@ export const BannerWrapper = styled.div<{ $hasanimation: boolean }>`
   }
 `;
 
-export const BannerWrapperContainer = styled.div`
+export const BannerWrapperContainer = styled.div<HasAnimationProps>`
   height: ${({ $hasanimation }) => ($hasanimation ? "160px" : "100%")};
   width: 100%;
   overflow-x: hidden;
