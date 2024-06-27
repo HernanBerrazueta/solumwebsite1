@@ -69,4 +69,5 @@ export const TeamMemberPosition = styled.p`
 
 export const ButtonText = styled.span`
   text-transform: none !important;
+  font-family: "CircularXXWeb-Medium", sans-serif;
 `;

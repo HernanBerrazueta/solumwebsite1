@@ -57,7 +57,6 @@ export const ImageContainer = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: auto;
-
   transform: scale(1);
   transition: all 0.3s ease-out;
 
@@ -107,7 +106,6 @@ export const ButtonContainer = styled.div<{
     font-size: 1.2rem;
     border-radius: 7px;
     border: none;
-    padding: 10px 20px;
 
     &:hover {
       background-color: ${theme.palette.primary.dark};

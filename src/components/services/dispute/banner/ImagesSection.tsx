@@ -6,15 +6,16 @@ interface BannerProps {
     src: string;
     name: string;
   }[];
+  hasAnimation: boolean;
 }
 
-const ImagesSection: React.FC<BannerProps> = ({ images }) => {
+const ImagesSection: React.FC<BannerProps> = ({ images, hasAnimation }) => {
   return (
     <>
-      <Images>
+      <Images $hasanimation={hasAnimation}>
         {images.map(({ src, name }) => (
-          <div key={name}>
-            <ImageStyled src={src} alt={name} />
+          <div key={name} style={{ maxWidth: 250 }}>
+            <ImageStyled src={src} alt={name} $hasanimation={hasAnimation} />
           </div>
         ))}
       </Images>

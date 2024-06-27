@@ -3,7 +3,11 @@ import { useLocation } from "react-router-dom";
 import { Grid } from "@mui/material";
 import theme from "../../../theme";
 import { promiseData } from "./data";
-import { GridPromiseWrapper } from "./Promise.styled";
+import {
+  GridPromiseWrapper,
+  StyledHeading,
+  StyledParagraph,
+} from "./Promise.styled";
 
 const PromiseComponent: React.FC = () => {
   const location = useLocation();
@@ -22,32 +26,19 @@ const PromiseComponent: React.FC = () => {
   }
 
   return (
-    <>
-      <GridPromiseWrapper item xs={12}>
-        <Grid
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            color: theme.palette.primary.main,
-          }}
-        >
-          <h2
-            style={{
-              fontSize: 32,
-              marginBottom: 50,
-              backgroundColor: "#fff",
-              fontFamily: "CircularXXWeb-Medium, sans-serif",
-            }}
-          >
-            {promiseData[imageIndex].title}
-          </h2>
-          <p style={{ fontSize: 22, backgroundColor: "#fff" }}>
-            {promiseData[imageIndex].description}
-          </p>
-        </Grid>
-      </GridPromiseWrapper>
-    </>
+    <GridPromiseWrapper item xs={12}>
+      <Grid
+        container
+        direction="column"
+        alignItems="flex-start"
+        style={{
+          color: theme.palette.primary.main,
+        }}
+      >
+        <StyledHeading>{promiseData[imageIndex].title}</StyledHeading>
+        <StyledParagraph>{promiseData[imageIndex].description}</StyledParagraph>
+      </Grid>
+    </GridPromiseWrapper>
   );
 };
 

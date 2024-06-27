@@ -16,23 +16,23 @@ export const Container = styled.div`
     }
 
     @media ${device.smallTablet} {
+      margin: 0px 20px;
+    }
+    @media ${device.tablet} {
       margin-left: 40px;
     }
 
     @media ${device.desktop} {
       margin-right: 100px;
     }
-
-    @media ${device.ultraLarge} {
-      margin-right: 100px;
-    }
   }
 
   & > :last-child {
-    margin: 0 40px 0 30px;
-
     @media ${device.mobileOnly} {
-      margin-left: 0px;
+      margin: 0px;
+    }
+    @media ${device.tablet} {
+      margin-right: 40px;
     }
   }
 

@@ -40,7 +40,7 @@ export const MenuBtn = styled.label`
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: lime;
+    background-color: ${theme.palette.primary.main};
     transition-duration: 0.25s;
   }
   span::before {
@@ -61,7 +61,7 @@ export const MenuBox = styled.ul`
   z-index: 5;
 
   width: 100vw;
-  height: 85%;
+  height: 90%;
   margin: 0;
   padding: 20px 0;
   list-style: none;
@@ -79,7 +79,7 @@ export const MenuItem = styled(Link)<{ active?: string }>`
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: ${({ active }) => (active ? "2px solid #00ff00" : "none")};
+  border-bottom: ${({ active }) => (active ? "2px solid #DDD7E3" : "none")};
   transition-duration: 0.25s;
   &:hover {
     background-color: #cfd8dc;
@@ -94,22 +94,13 @@ export const SubMenu = styled.ul`
 
 export const SubMenuListItem = styled.li`
   position: relative;
-
-  // ----- Bullet points -----
-
-  // &::before {
-  //   content: "•";
-  //   position: absolute;
-  //   right: 89%;
-  //   top: 10px;
-  // }
 `;
 
 export const SubMenuItem = styled(Link)<{ active?: string }>`
   display: block;
   padding: 8px 0 8px 55px;
   color: ${theme.palette.primary.main};
-  border-bottom: ${({ active }) => (active ? "2px solid #00ff00" : "none")};
+  border-bottom: ${({ active }) => (active ? "2px solid #DDD7E3" : "none")};
   font-size: 18px;
   text-decoration: none;
 
@@ -121,6 +112,6 @@ export const SubMenuItem = styled(Link)<{ active?: string }>`
 `;
 
 export const LogoItem = styled.li`
-  padding: 7px 0 0 30px;
+  padding: 12px 0 0 30px;
   margin-bottom: 30px;
 `;

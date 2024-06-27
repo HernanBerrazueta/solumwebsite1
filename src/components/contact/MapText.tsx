@@ -10,8 +10,10 @@ import {
 } from "../homepage/ImageText/ImageText.styled";
 import { imageData } from "../homepage/ImageText/data";
 import { FadeInAnimation } from "../animations/animations";
+import useMatchMedia from "../../hooks/useMediaQuery";
 
 const MapText: React.FC = () => {
+  const { isMobile } = useMatchMedia();
   const location = useLocation();
   const isContactPage = location.pathname === "/contact";
 
@@ -30,7 +32,27 @@ const MapText: React.FC = () => {
     ));
   };
 
-  return (
+  return isMobile ? (
+    <Container>
+      <Content>
+        <TextColumn>
+          <FadeInAnimation $delay="0s">
+            <Text
+              title={imageData[imageIndex].title}
+              subtitle={imageData[imageIndex].subtitle}
+              text={imageData[imageIndex].text}
+              subText={formatSubText(imageData[imageIndex].subText)}
+              showIcons={isContactPage}
+            />
+          </FadeInAnimation>
+        </TextColumn>
+      </Content>
+      <div>
+        <MapComponent />
+        <Form />
+      </div>
+    </Container>
+  ) : (
     <Container>
       <div>
         <MapComponent />
@@ -44,7 +66,7 @@ const MapText: React.FC = () => {
               subtitle={imageData[imageIndex].subtitle}
               text={imageData[imageIndex].text}
               subText={formatSubText(imageData[imageIndex].subText)}
-              showIcons={isContactPage} // Pass a prop to indicate when to show icons
+              showIcons={isContactPage}
             />
           </FadeInAnimation>
         </TextColumn>

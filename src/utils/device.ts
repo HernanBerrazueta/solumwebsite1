@@ -14,7 +14,7 @@ export const device = {
   mobileOnly: `(max-width: ${size.mobileOnly})`,
   smallTablet: `(min-width: ${size.smallTablet})`,
   tablet: `(min-width: ${size.tablet})`,
-  tabletOnly: `(min-width: ${size.tabletOnly})`,
+  tabletOnly: `(max-width: ${size.tabletOnly})`,
   desktop: `(min-width: ${size.desktop})`,
   copyright: `(min-width: ${size.copyright})`,
   ultraLarge: `(min-width: ${size.ultraLarge})`,

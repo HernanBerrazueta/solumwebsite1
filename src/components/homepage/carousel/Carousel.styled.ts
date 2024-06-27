@@ -45,8 +45,9 @@ export const SlideContent = styled.div`
   width: 100%;
   height: 100%;
   padding: 100px 150px;
-  font-size: 22px;
   margin: 0 auto;
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
 
   @media ${device.mobileOnly} {
     font-size: 12px;
@@ -54,6 +55,9 @@ export const SlideContent = styled.div`
   }
   @media ${device.smallTablet} {
     padding: 10px 110px;
+    font-size: 18px;
+  }
+  @media ${device.tablet} {
     font-size: 22px;
   }
 

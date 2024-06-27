@@ -10,10 +10,11 @@ export const Container = styled.div`
   z-index: 1;
 
   & > :first-child {
-    margin: 10px 30px 0px 40px;
-
-    @media ${device.mobileOnly} {
+    @media ${device.mobile} {
       margin: 0;
+    }
+    @media ${device.tablet} {
+      margin-left: 40px;
     }
   }
 
@@ -30,9 +31,9 @@ export const Container = styled.div`
       padding: 0 20px;
     }
 
-    @media ${device.tablet} {
-      padding: 0 50px;
-    }
+    // @media ${device.tablet} {
+    //   padding: 0 50px;
+    // }
 
     @media ${device.desktop} {
       padding: 0 60px;
@@ -86,7 +87,7 @@ export const TextColumn = styled.div`
 `;
 
 export const FlexWrap = styled.div`
-  display: flex;
+  // display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -117,6 +118,8 @@ export const TextStyled = styled.p`
 export const ImageStyled = styled.img`
   object-fit: cover;
   max-width: 60%;
+  border-radius: 5px;
+  border: 5px solid #fff;
 
   @media ${device.mobileOnly} {
     max-width: 100%;

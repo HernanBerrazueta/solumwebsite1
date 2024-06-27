@@ -4,6 +4,7 @@ import ImageText from "../../components/homepage/ImageText/ImageText";
 import PromiseComponent from "../../components/about/promise/Promise";
 import Grid from "../../components/services/grid/Grid";
 import Carousel from "../../components/homepage/carousel/Carousel";
+import Banner from "../../components/services/dispute/banner/Banner";
 import {
   consultancyPageCarouselTitle,
   consultancyPageCarouselData,
@@ -15,7 +16,7 @@ import {
 } from "../../components/services/Services.styled";
 import ButtonComponent from "../../common/Button";
 
-const ServicesPage: React.FC = () => {
+const ConsultancyPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -34,10 +35,11 @@ const ServicesPage: React.FC = () => {
         data={consultancyPageCarouselData}
         title={consultancyPageCarouselTitle}
       />
+      <Banner pageType="ConsultancyPage" />
       <ButtonComponent text={buttonText} to="/contact" />
       <Footer />
     </>
   );
 };
 
-export default ServicesPage;
+export default ConsultancyPage;

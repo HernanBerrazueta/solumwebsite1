@@ -1,19 +1,26 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
-import { Container, Input, ValidationMessage } from "./Form.styled";
+import {
+  Container,
+  Input,
+  ValidationMessage,
+  TextAreaStyled,
+} from "./Form.styled";
 import { Title } from "../../components/homepage/carousel/Carousel.styled";
 import { ButtonContainer } from "../../components/homepage/insights/Insights.styled";
 import { ButtonText } from "../../components/about/team/Team.styled";
 import { formText } from "../../components/homepage/contact/data";
+import useMatchMedia from "../../hooks/useMediaQuery";
 
 const Form: React.FC = () => {
+  const { isMobile } = useMatchMedia();
   const [query, setQuery] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [queryError, setQueryError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [subjectError, setSubjectError] = useState(false);
+  const [submitted, setSubmitted] = useState(false); // State to track form submission
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -23,7 +30,10 @@ const Form: React.FC = () => {
     }
     if (!isValidEmail(email)) {
       setEmailError(true);
+      return;
     }
+
+    setSubmitted(true);
   };
 
   const isValidEmail = (email: string) => {
@@ -60,55 +70,94 @@ const Form: React.FC = () => {
       <Title formTitle style={{ maxWidth: 300 }}>
         Get in Touch
       </Title>
-      <form onSubmit={handleSubmit}>
-        <Container>
-          <Input
-            style={{ minHeight: 150 }}
-            type="text"
-            placeholder="Enter your query (the more detail, the better!)"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            onBlur={handleQueryBlur}
-            required
-          />
-          {queryError && (
-            <ValidationMessage>Please enter your query.</ValidationMessage>
-          )}
-        </Container>
-        <Container formcontainer="true">
-          <Input
-            type="email"
-            placeholder="Enter your Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            onBlur={handleEmailBlur}
-            required
-          />
-          {emailError && (
-            <ValidationMessage>Please enter a valid email.</ValidationMessage>
-          )}
-        </Container>
-        <Container formcontainer="true">
-          <Input
-            type="text"
-            placeholder="Subject"
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            onBlur={handleSubjectBlur}
-            required
-          />
-          {subjectError && (
-            <ValidationMessage>Please enter the subject.</ValidationMessage>
-          )}
-        </Container>
-        <ButtonContainer formbutton="true">
-          <Link to="/contact">
-            <Button variant="contained" color="primary" type="submit">
-              <ButtonText style={{ minWidth: 90 }}>{formText}</ButtonText>
+      {!submitted && (
+        <form onSubmit={handleSubmit}>
+          <Container>
+            <TextAreaStyled
+              placeholder="Please enter your query"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onBlur={handleQueryBlur}
+              required
+              style={{
+                padding: "5px 10px",
+                width: 450,
+                maxWidth: 450,
+                minWidth: 450,
+                height: 150,
+                maxHeight: 250,
+                backgroundColor: "#fff",
+                fontFamily: "CircularXXWeb-Regular, sans-serif",
+                // placeholderColor: "#c4c4c4",
+              }}
+            />
+            {queryError && (
+              <ValidationMessage>Please enter your query.</ValidationMessage>
+            )}
+          </Container>
+          <Container formcontainer="true">
+            <Input
+              type="email"
+              placeholder="Enter your Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              onBlur={handleEmailBlur}
+              required
+              style={{
+                fontFamily: "CircularXXWeb-Regular, sans-serif",
+              }}
+            />
+            {emailError && (
+              <ValidationMessage>Please enter a valid email.</ValidationMessage>
+            )}
+          </Container>
+          <Container formcontainer="true">
+            <Input
+              type="text"
+              placeholder="Subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              onBlur={handleSubjectBlur}
+              required
+              style={{
+                fontFamily: "CircularXXWeb-Regular, sans-serif",
+              }}
+            />
+            {subjectError && (
+              <ValidationMessage>Please enter the subject.</ValidationMessage>
+            )}
+          </Container>
+          <ButtonContainer formbutton="true">
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              disabled={
+                query.trim() === "" ||
+                !isValidEmail(email) ||
+                subject.trim() === ""
+              }
+            >
+              <ButtonText style={{ minWidth: 90, fontSize: "14px" }}>
+                {formText}
+              </ButtonText>
             </Button>
-          </Link>
-        </ButtonContainer>
-      </form>
+          </ButtonContainer>
+        </form>
+      )}
+      {submitted && (
+        <Container>
+          <p
+            style={{
+              color: "#302353",
+              marginLeft: isMobile ? "22px" : "0",
+            }}
+          >
+            Thank you! Your form has been submitted and we will be in touch with
+            you shortly.
+          </p>
+        </Container>
+      )}
     </Container>
   );
 };

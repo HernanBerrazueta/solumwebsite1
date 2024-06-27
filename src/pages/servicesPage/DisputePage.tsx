@@ -15,9 +15,8 @@ import {
   Container,
   TopContainer,
 } from "../../components/services/Services.styled";
-import { images } from "../../components/services/dispute/data";
 
-const ServicesPage: React.FC = () => {
+const DisputePage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -36,11 +35,11 @@ const ServicesPage: React.FC = () => {
         data={disputePageCarouselData}
         title={disputePageCarouselTitle}
       />
-      <Banner images={images} />
+      <Banner pageType="DisputePage" />
       <ButtonComponent text={buttonText} to="/contact" />
       <Footer />
     </>
   );
 };
 
-export default ServicesPage;
+export default DisputePage;

@@ -98,7 +98,11 @@ const ArticleList: React.FC = () => {
               >
                 <ArticleImage src={article.image} alt={article.title} />
                 <Grid>
-                  <ArticleTitle>{article.title}</ArticleTitle>
+                  <ArticleTitle
+                    style={{ fontFamily: "CircularXXWeb-Medium, sans-serif" }}
+                  >
+                    {article.title}
+                  </ArticleTitle>
                   <ArticleDescription>{article.description}</ArticleDescription>
                 </Grid>
               </ArticleCard>

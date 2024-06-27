@@ -1,19 +1,22 @@
 import { BannerWrapper, BannerWrapperContainer } from "./Banner.styled";
 import ImagesSection from "./ImagesSection";
+import { disputeImages, consultancyImages } from "../data";
 
 interface BannerProps {
-  images: {
-    src: string;
-    name: string;
-  }[];
+  pageType: "DisputePage" | "ConsultancyPage";
 }
 
-const Banner: React.FC<BannerProps> = ({ images }) => {
+const Banner: React.FC<BannerProps> = ({ pageType }) => {
+  const images = pageType === "DisputePage" ? disputeImages : consultancyImages;
+  const hasAnimation = pageType === "DisputePage";
+
   return (
     <BannerWrapperContainer>
-      <BannerWrapper>
-        <ImagesSection images={images} />
-        <ImagesSection images={images} />
+      <BannerWrapper $hasanimation={hasAnimation}>
+        <ImagesSection images={images} hasAnimation={hasAnimation} />
+        {hasAnimation && (
+          <ImagesSection images={images} hasAnimation={hasAnimation} />
+        )}
       </BannerWrapper>
     </BannerWrapperContainer>
   );

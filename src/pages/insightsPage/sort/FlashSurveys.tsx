@@ -21,10 +21,17 @@ const FlashSurveys: React.FC = () => {
           backgroundColor: "#fff",
         }}
       >
-        <h2>Our Flash Survey Programme</h2>
+        <h2
+          style={{
+            fontSize: "32px",
+            fontFamily: "CircularXXWeb-Medium, sans-serif",
+          }}
+        >
+          Our Flash Survey Programme
+        </h2>
       </div>
       {flashSurveys.map((text) => (
-        <p style={{ backgroundColor: "#fff" }}>{text}</p>
+        <p style={{ backgroundColor: "#fff", fontSize: "22px" }}>{text}</p>
       ))}
       <ButtonComponent text={buttonText} to="/contact" />
     </FlashWrapper>

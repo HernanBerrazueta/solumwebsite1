@@ -10,8 +10,13 @@ import Logo9 from "../../../assets/images/disputePage/logos/Linklaters-Logo.wine
 import Logo10 from "../../../assets/images/disputePage/logos/Pinsent Masons.svg";
 import Logo11 from "../../../assets/images/disputePage/logos/Quinn Emanuel Urquhart & Sullivan_idmi55fiXy_2.svg";
 
-// Used for Banner
-export const images = [
+import Logo12 from "../../../assets/images/consultancyPage/logos/Commonwealth_Bank_Logo.svg";
+import Logo13 from "../../../assets/images/consultancyPage/logos/Danske_Bank_logo.svg";
+import Logo14 from "../../../assets/images/consultancyPage/logos/The_logo_of_APG.svg";
+import Logo15 from "../../../assets/images/consultancyPage/logos/Raiffeisen_Bank_International_Logo.svg";
+import Logo16 from "../../../assets/images/consultancyPage/logos/us-bank-2.svg";
+
+export const disputeImages = [
   {
     src: Logo1,
     name: "Allen and Overy",
@@ -55,5 +60,28 @@ export const images = [
   {
     src: Logo11,
     name: "Quinn Emanuel Urquhart & Sullivan",
+  },
+];
+
+export const consultancyImages = [
+  {
+    src: Logo12,
+    name: "Commonwealth Bank",
+  },
+  {
+    src: Logo13,
+    name: "Danske Bank",
+  },
+  {
+    src: Logo14,
+    name: "APG",
+  },
+  {
+    src: Logo15,
+    name: "Raiffeisen Bank International",
+  },
+  {
+    src: Logo16,
+    name: "us bank",
   },
 ];

@@ -21,6 +21,7 @@ export const Container = styled.div`
 
   @media ${device.tablet} {
     flex-direction: row;
+    gap: 20px;
   }
   @media ${device.desktop} {
     font-size: 20px;
@@ -44,7 +45,7 @@ export const CommonStyles = styled.div`
   }
 
   @media ${device.tablet} {
-    padding: 30px;
+    padding: 10px;
   }
 
   @media ${device.desktop} {
@@ -59,14 +60,22 @@ export const CommonStyles = styled.div`
 export const Heading = styled.h3`
   font-size: 24px;
   margin-bottom: 50px;
+
+  @media ${device.smallTablet} {
+    margin-bottom: 0px;
+  }
+  @media ${device.desktop} {
+    margin-bottom: 50px;
+  }
 `;
 
 export const Column = styled(CommonStyles)<ColumnProps>`
   background-color: ${({ $isOdd }) =>
     $isOdd ? "#f0ecf3" : theme.palette.primary.main};
   color: ${({ $isOdd }) => ($isOdd ? theme.palette.primary.main : "#fff")};
-  justify-content: space-between;
   cursor: pointer;
+  border-radius: 5px;
+  border: 5px solid #fff;
 
   transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
 
@@ -79,16 +88,17 @@ export const Column = styled(CommonStyles)<ColumnProps>`
 
   @media ${device.mobileOnly} {
     width: 100%;
-    min-height: 350px;
     justify-content: center;
   }
 
-  @media ${device.desktop} {
-    width: calc(33vw - 70px);
-    height: 350px;
+  @media ${device.smallTablet} {
+    height: calc(33vw - 40px);
+  }
+  @media ${device.tablet} {
+    min-height: 300px;
   }
 
   @media ${device.ultraLarge} {
-    height: 450px;
+    padding: 0 120px;
   }
 `;

@@ -76,12 +76,12 @@ export const ButtonGroup = styled.div`
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  font-size: 22px;
 
   @media ${device.mobileOnly} {
     background-color: #fff;
     display: block;
     text-align: center;
-    background-color: #fff;
   }
 `;
 
@@ -89,7 +89,7 @@ export const Button = styled.div<{ $active: boolean }>`
   padding: 10px 20px;
   color: ${theme.palette.primary.main};
   cursor: pointer;
-  background-color: transparent;
+  background-color: #fff;
   border-radius: 0px;
   border-bottom: ${({ $active }) =>
     $active ? `2px solid ${theme.palette.primary.main}` : "none"};

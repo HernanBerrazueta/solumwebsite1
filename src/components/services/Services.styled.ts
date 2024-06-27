@@ -17,10 +17,12 @@ export const Container = styled.div`
 `;
 
 export const TopContainer = styled(Container)`
-  height: calc(100vh - 130px);
   padding-top: 0px;
 
-  @media ${device.mobileOnly} {
+  @media ${device.mobile} {
     height: 100%;
+  }
+  @media ${device.desktop} {
+    height: calc(100vh - 130px);
   }
 `;

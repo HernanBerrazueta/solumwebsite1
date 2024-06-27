@@ -81,7 +81,13 @@ const NavMenu: React.FC = () => {
                     Services <ExpandMoreIcon style={{ marginLeft: "4px" }} />
                   </strong>
                 ) : (
-                  <span style={{ display: "flex", alignItems: "center" }}>
+                  <span
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginBottom: "-4px",
+                    }}
+                  >
                     Services <ExpandMoreIcon style={{ marginLeft: "4px" }} />
                   </span>
                 )}

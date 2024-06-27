@@ -11,29 +11,25 @@ import {
 } from "./Insights.styled";
 import { insightsData, buttonText } from "./data";
 import ButtonComponent from "../../../common/Button";
-import useMatchMedia from "../../../hooks/useMediaQuery";
 
 const Insights: React.FC = () => {
-  const { isMobile } = useMatchMedia();
-  const background: string =
-    "linear-gradient(180deg, transparent 30%, rgba(238, 236, 243, 1) 30%)";
-
   return (
-    <Container
-      style={{
-        background: isMobile ? "transparent" : background,
-        paddingBottom: isMobile ? 0 : 50,
-      }}
-    >
+    <Container>
       <TitleContainer>
         <Title>Our Insights</Title>
       </TitleContainer>
       <ContentContainer>
-        {insightsData.map(({ image, title, description }) => (
+        {insightsData.map(({ image, title, description }, index) => (
           <ImageContainer key={description}>
-            <Image src={image} alt={description} />
+            <Image
+              src={image}
+              alt={description}
+              style={index === 0 ? { border: "1px solid #302353" } : {}}
+            />
             <TextContainer>
-              <Paragraph>
+              <Paragraph
+                style={{ fontFamily: "CircularXXWeb-Medium, sans-serif" }}
+              >
                 <strong>{title}</strong>
               </Paragraph>
               <Paragraph>{description}</Paragraph>

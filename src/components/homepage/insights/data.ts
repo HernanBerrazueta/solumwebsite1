@@ -1,21 +1,21 @@
-import Image1 from "../../../assets/images/disputePage/dispute.webp";
-import Image2 from "../../../assets/images/homePage/homepageSection.webp";
-import Image3 from "../../../assets/images/consultancyPage/consultancy.webp";
+import Image1 from "../../../assets/images/homePage/LDI in the spotlight cover.webp";
+import whitepaper1 from "../../../assets/images/insightsPage/Whitepapers/1. IBOR Update [2021]/Ibor Update March 2021 Border.webp";
+import whitepaper2 from "../../../assets/images/insightsPage/Whitepapers/2. A Market Implied Valuation of Loans and their Embedded Optionality/Loan White Paper Front Cover Border.webp";
 
 export const insightsData = [
   {
     image: Image1,
-    title: "A Market Implied Valuation of Loans and their Embedded Optionality",
+    title: "LDI in the Spotlight",
+    description: "",
+  },
+  {
+    image: whitepaper1,
+    title: "IBOR Update March 2021",
     description: "Whitepaper",
   },
   {
-    image: Image2,
-    title: "Buy-side Participation in OTC Derivatives Markets",
-    description: "OTC",
-  },
-  {
-    image: Image3,
-    title: "Funding Valuation Adjustment",
+    image: whitepaper2,
+    title: "A Market Implied Valuation of Loans and their Embedded Optionality",
     description: "Survey",
   },
 ];

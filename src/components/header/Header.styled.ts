@@ -20,12 +20,11 @@ export const servicesPages = [
   { to: "https://www.xplainfinancial.com/", label: "Xplain" },
 ];
 export const insightsPages = [
-  { to: "/insights/news", label: "News" },
+  // { to: "/insights/news", label: "News" },
   { to: "/insights/publications", label: "Publications" },
 ];
 
 export const StyledHeader = styled.header`
-  // background-color: ${theme.palette.text.primary};
   color: ${theme.palette.primary.main};
   display: flex;
   align-items: center;
@@ -36,6 +35,7 @@ export const StyledHeader = styled.header`
   @media ${device.mobileOnly} {
     font-size: 15px;
     padding: 30px 20px;
+    justify-content: space-between;
   }
 
   @media ${device.smallTablet} {
@@ -49,25 +49,27 @@ export const StyledHeader = styled.header`
 `;
 
 export const LogoWrapper = styled(Link)`
+  display: flex;
   text-decoration: none;
   cursor: pointer;
 `;
 
 export const LogoImage = styled.img`
   @media ${device.mobileOnly} {
-    width: 70%;
+    // width: 80%;
+    width: 240px;
   }
 
   @media ${device.smallTablet} {
-    width: 45%;
+    width: 70%;
   }
 
   @media ${device.tablet} {
-    width: 50%;
+    width: 75%;
   }
 
   @media ${device.ultraLarge} {
-    width: 55%;
+    width: 65%;
   }
 `;
 
@@ -110,23 +112,25 @@ export const NavList = styled.div`
 `;
 
 export const NavLinkStyled = styled(NavLink)<NavLinkProps>`
+  display: inline-block;
+  font-family: "CircularXXWeb-Regular", sans-serif;
   background-color: #fff;
   color: ${theme.palette.primary.main};
-  text-decoration: none;
-  // margin-right: 70px;
-  font-family: ${({ active }) =>
-    active
-      ? "CircularXXWeb-Bold, sans-serif"
-      : "CircularXXWeb-Regular, sans-serif"};
+  border-bottom: ${({ active }) => (active ? "4px solid #DDD7E3" : "none")};
+  margin-bottom: -4px;
+  height: 34px;
+  transition: border-bottom 0.1s ease-in-out, margin-bottom 0.1s ease-in-out;
 
   &:hover {
     color: ${theme.palette.primary.main};
+    border-bottom: 4px solid #ddd7e3;
+    margin-bottom: -4px;
   }
 `;
 
 export const DropdownMenu = styled.div`
   position: absolute;
-  background-color: ${theme.palette.text.primary};
+  background-color: #f0edf3b3;
   display: flex;
   flex-direction: column;
   min-width: 160px;
@@ -179,11 +183,10 @@ export const DropdownItem = styled(NavLink)`
   text-decoration: none;
   padding: 10px;
   outline: 0.5px solid #0000001c;
-  background-color: #efecf2;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #ddd7e3;
+    background-color: #ded8e4e6;
     color: ${theme.palette.primary.main};
   }
 `;
