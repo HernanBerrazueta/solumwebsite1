@@ -54,6 +54,9 @@ export const ArticleImage = styled.img`
   @media ${device.smallTablet} {
     width: 220px;
   }
+  @media ${device.tablet} {
+    width: 260px;
+  }
 `;
 
 export const ArticleTitle = styled.h3`
