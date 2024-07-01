@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import {
   burgerMenuItems,
   insightsPages,
@@ -91,22 +93,24 @@ const BurgerMenu: React.FC<BurgerProps> = ({
         </LogoItem>
         {burgerMenuItems.map(({ to, label }) => (
           <li key={label}>
-            <MenuItem
-              to={to}
-              active={location.pathname === to ? "true" : undefined}
-              onClick={
-                (label === "Services" && handleToggleServices) ||
-                (label === "Insights" && handleToggleInsights) ||
-                handleLinkClick
-              }
-            >
-              {label}
-              {(label === "Insights" || label === "Services") && (
-                <ExpandMoreIcon
-                  style={{ verticalAlign: "middle", marginLeft: "auto" }}
-                />
-              )}
-            </MenuItem>
+            <div style={{ padding: "12px 34px 12px 56px" }}>
+              <MenuItem
+                to={to}
+                active={location.pathname === to ? "true" : undefined}
+                onClick={
+                  (label === "Services" && handleToggleServices) ||
+                  (label === "Insights" && handleToggleInsights) ||
+                  handleLinkClick
+                }
+              >
+                {label}
+                {(label === "Insights" || label === "Services") && (
+                  <ExpandMoreIcon
+                    style={{ verticalAlign: "middle", marginLeft: "auto" }}
+                  />
+                )}
+              </MenuItem>
+            </div>
             {label === "Services" && showServices && (
               <SubMenu>
                 {servicesPages.map(({ to, label }) => (
@@ -119,6 +123,12 @@ const BurgerMenu: React.FC<BurgerProps> = ({
                       >
                         {label}
                       </SubMenuItem>
+                      {label === "Xplain" && (
+                        <FontAwesomeIcon
+                          icon={faExternalLinkAlt}
+                          style={{ fontSize: "medium", marginLeft: 10 }}
+                        />
+                      )}
                     </div>
                   </SubMenuListItem>
                 ))}

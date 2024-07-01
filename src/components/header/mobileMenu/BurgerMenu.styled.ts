@@ -5,6 +5,7 @@ import theme from "../../../theme";
 
 export const HamburgerMenu = styled.div`
   position: relative;
+  z-index: 5;
 `;
 
 export const MenuToggle = styled.input`
@@ -72,16 +73,16 @@ export const MenuBox = styled.ul`
 `;
 
 export const MenuItem = styled(Link)<{ active?: string }>`
-  display: flex;
+  display: inline;
   align-items: center;
   width: 100%;
-  padding: 12px 34px 12px 56px;
   color: ${theme.palette.primary.main};
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: ${({ active }) => (active ? "2px solid #DDD7E3" : "none")};
+  border-bottom: ${({ active }) => (active ? "3px solid #DDD7E3" : "none")};
   transition-duration: 0.25s;
+
   &:hover {
     background-color: #cfd8dc;
   }
