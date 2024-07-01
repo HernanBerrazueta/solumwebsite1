@@ -3,7 +3,7 @@ import { Grid } from "@mui/material";
 import { device } from "../../../utils/device";
 
 export const GridPromiseWrapper = styled(Grid)`
-  text-align: justify;
+  text-align: left;
   justify-content: center;
   flex-direction: row;
   flex-wrap: nowrap;

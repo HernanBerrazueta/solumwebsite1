@@ -7,12 +7,12 @@ export const homePageCarouselData = [
   {
     content:
       "The Solum team’s unique combination of technical expertise and extensive market experience promoted constructive and challenging interactive discussions across all aspects of Counterparty Credit Risk. I look forward to working with Solum again in the future.",
-    signature: "Major European Bank Board Member",
+    signature: "Board Member, Major European Bank",
   },
   {
     content:
       "Solum has been working with us to assist in the design and development of a CVA application for the derivatives activity. I’d like to highlight the successful contribution of Solum to the project. Their insights provided added-value solutions in respect to the standards in the industry and thus we consider Solum as a partner that provides a differentiated and customized service to our needs.",
-    signature: "Major European Bank, Head of Quantitative & Business Solutions",
+    signature: "Head of Quantitative & Business Solutions, Major European Bank",
   },
   {
     content:
@@ -22,19 +22,19 @@ export const homePageCarouselData = [
   {
     content:
       "What Solum has is individuals who have actually traded or structured the products that are central to these disputes and therefore they are able to give first hand compelling evidence to the court of nuances of these instruments and the way the market treated them. They don’t try and blind anyone with science. It is the hands on approach and also very down to earth manner that Solum has which comes across very well in the court room.",
-    signature: "International Law Firm, Banking Litigation Partner",
+    signature: "Banking Litigation Partner, International Law Firm",
   },
   {
     content:
       "Solum’s professionalism and expertise were invaluable throughout the whole process”. “the platform and the team behind it are truly best in class",
     signature:
-      "Leading Fund Administrator, Global head of derivatives operations",
+      "Global Head of Derivatives Operations, Leading Fund Administrator",
   },
   {
     content:
-      "We are getting insights into out own pricing like never before and look forward to growing our relationship with solum further.",
+      "We are getting insights into out own pricing like never before and look forward to growing our relationship with Solum further.",
     signature:
-      "Leading Fund Administrator, Global head of derivatives operations",
+      "Global Head of Derivatives Operations, Leading Fund Administrator",
   },
 ];
 
@@ -76,7 +76,7 @@ export const disputePageCarouselData = [
   {
     content:
       "Solum’s highly forensic and meticulous approach was evident from the outset, and resulted in a report of a very high quality. I would be delighted to work with Solum again in the future.",
-    signature: "John McElroy, Litigaton Partner",
+    signature: "John McElroy, Litigation Partner, Hausfeld & Co LLP",
   },
   {
     content:
@@ -101,7 +101,7 @@ export const disputePageCarouselData = [
   {
     content:
       "It was a pleasure to work with the Solum team. Solum were engaged as CMBS and derivatives experts in relation to high profile litigation which involved allegations of interest rate swaps mis-selling against one of the UK’s largest banks. Solum’s highly forensic and meticulous approach was evident from the outset, and resulted in a report of a very high quality. I would be delighted to work with Solum again in the future.",
-    signature: "John McElroy, Litigation Partner",
+    signature: "John McElroy, Litigation Partner, Hausfeld & Co LLP",
   },
   {
     content:
@@ -114,6 +114,6 @@ export const aboutPageCarouselData = [
   {
     content:
       "Most of our work with Solum in the future will be to working together on client opportunities in which we trust Solum’s expertise and experience.",
-    signature: " Major European Bank Board Member",
+    signature: "Board Member, Major European Bank",
   },
 ];

@@ -11,7 +11,7 @@ export const Container = styled.div`
   gap: 50px;
   margin: 70px 0;
   font-size: 22px;
-  line-height: 1.6;
+  // line-height: 1.6;
   // background-color: ${theme.palette.text.primary};
 
   @media ${device.mobile} {
@@ -22,13 +22,19 @@ export const Container = styled.div`
   @media ${device.tablet} {
     flex-direction: row;
     gap: 20px;
+
+    max-width: 1024px;
+    margin: 0 auto;
   }
   @media ${device.desktop} {
-    font-size: 20px;
+    max-width: 1280px;
+  }
+  @media ${device.copyright} {
+    max-width: 2200px;
   }
 
   @media ${device.ultraLarge} {
-    font-size: 22px;
+    max-width: 2480px;
   }
 `;
 
@@ -36,36 +42,58 @@ export const CommonStyles = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   text-align: center;
   color: ${theme.palette.text.primary};
 
-  @media ${device.mobile} {
+  @media ${device.mobileOnly} {
+    min-height: 230px;
+    max-height: 230px;
     padding: 20px;
   }
 
+  @media ${device.smallTablet} {
+    padding: 50px 20px;
+  }
   @media ${device.tablet} {
-    padding: 10px;
+    padding: 50px 20px 20px;
   }
 
   @media ${device.desktop} {
-    padding: 50px;
+    padding: 60px 50px;
   }
 
+  @media ${device.copyright} {
+    padding: 100px;
+    height: 450px;
+  }
   @media ${device.ultraLarge} {
     padding: 100px;
+    height: 600px;
   }
 `;
 
 export const Heading = styled.h3`
+  font-family: "CircularXXWeb-Medium", sans-serif;
   font-size: 24px;
   margin-bottom: 50px;
 
   @media ${device.smallTablet} {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
   }
   @media ${device.desktop} {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+  }
+  @media ${device.ultraLarge} {
+    font-size: 36px;
+  }
+`;
+
+export const Passage = styled.p`
+  line-height: 1;
+
+  @media ${device.ultraLarge} {
+    font-size: 28px;
   }
 `;
 
@@ -92,13 +120,16 @@ export const Column = styled(CommonStyles)<ColumnProps>`
   }
 
   @media ${device.smallTablet} {
-    height: calc(33vw - 40px);
+    // height: calc(33h - 40px);
   }
   @media ${device.tablet} {
     min-height: 300px;
   }
+  @media ${device.desktop} {
+    min-height: 380px;
+  }
 
   @media ${device.ultraLarge} {
-    padding: 0 120px;
+    padding: 160px 120px;
   }
 `;

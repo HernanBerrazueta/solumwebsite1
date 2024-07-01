@@ -9,7 +9,6 @@ export const ContactContainer = styled.div`
     padding: 50px 20px;
   }
   @media ${device.smallTablet} {
-    // text-align: justify;
     padding: 50px 30px;
   }
   @media ${device.desktop} {

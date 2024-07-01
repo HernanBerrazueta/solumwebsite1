@@ -13,13 +13,13 @@ interface Data {
 export const imageData: Data[] = [
   {
     src: Image,
-    alt: "Description of the image",
-    title: "Sharing our Expertise",
+    alt: "Round tunnel",
+    title: "Sharing our expertise",
     subtitle:
-      "We are a team of investment banking professionals with extensive experience in banking front-office trading and technology, delivering tailored solutions across all facets of derivatives.",
-    text: "Our commitment is to impart our expertise to clients in a conflict-free manner, driven by tangible results.",
+      "We’re intensely proud of the long-term relationships we’ve built with clients ranging from banks and supranational organisations to corporates, insurance companies, public sector entities and asset management firms.",
+    text: "These relationships are built on two things. The first is our first-hand experience of working with derivatives in front-office banking roles ranging from trading and structuring to quantitative analysis and risk management.",
     subText:
-      "Over the years, we have proudly cultivated enduring partnerships with a diverse array of clients, ranging from banks and supranational organisations to corporates, insurance companies, public sector entities, and asset management firms.",
+      "The second is our focus on derivatives. Our clients know that when you need specialist advice, only a true specialist with practical expertise can provide it.",
   },
   {
     src: AboutBottom,

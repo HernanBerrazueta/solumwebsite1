@@ -1,10 +1,10 @@
 export const contactData = {
   title: "Contact Us",
   description:
-    "Whether you seek impartial insights, expert market advice or a software to help you better manage your derivatives portfolio, we are here to assist you. Let us collaborate to uncover the solutions you need. Contact us today.",
+    "Whether you’re looking for impartial insights, best market practice advice or software to help you better manage your derivatives portfolio, we’re here to help.",
 };
 
-export const buttonText = "Get in touch";
+export const buttonText = "Find out how Solum can help";
 
 export const buttonTextInsights = "Sign up";
 

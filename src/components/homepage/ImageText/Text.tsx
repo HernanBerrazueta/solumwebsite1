@@ -29,6 +29,7 @@ const Text: React.FC<TextProps> = ({
   showIcons = false,
 }) => {
   const location = useLocation();
+  const isInsightsPage = location.pathname === "/insights/publications";
   const isContactPage = location.pathname === "/contact";
 
   return (
@@ -68,13 +69,13 @@ const Text: React.FC<TextProps> = ({
           style={{
             maxWidth: 800,
             paddingBottom: 0,
-            display: isContactPage ? "inline-block" : "block",
+            display: isInsightsPage ? "inline-block" : "block",
           }}
         >
           {subText}
         </TextStyled>
       </FadeInAnimation>
-      {isContactPage && (
+      {isInsightsPage && (
         <FadeInAnimation $delay="0.3s">
           <ButtonContainer formbutton="true">
             <Link to="/contact">

@@ -66,19 +66,46 @@ export const TextAreaStyled = styled.textarea`
 
   padding: 5px 10px;
 
-  width: 450px;
-  max-width: 450px;
-  min-width: 450px;
-
-  height: 150px;
-  max-height: 250px;
-  min-height: 55px;
-
   border: 1px solid ${theme.palette.primary.main};
   background-color: ${theme.palette.text.primary};
   color: ${theme.palette.primary.main};
 
   &::placeholder {
-    color: c4c4c4;
+    color: #c4c4c4;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: ${theme.palette.primary.main};
+    box-shadow: none;
+  }
+
+  @media ${device.mobile} {
+    width: 335px;
+    max-width: 335px;
+    min-width: 335px;
+
+    height: 100px;
+    max-height: 150px;
+    min-height: 55px;
+  }
+
+  @media ${device.smallTablet} {
+    width: 450px;
+    max-width: 450px;
+    min-width: 450px;
+
+    height: 150px;
+    max-height: 250px;
+    min-height: 55px;
+  }
+  @media ${device.ultraLarge} {
+    width: 850px;
+    max-width: 850px;
+    min-width: 850px;
+
+    height: 250px;
+    max-height: 550px;
+    min-height: 155px;
   }
 `;

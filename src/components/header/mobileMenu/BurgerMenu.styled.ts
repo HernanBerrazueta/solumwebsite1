@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { device } from "../../../utils/device";
 import styled from "styled-components";
 import theme from "../../../theme";
 
@@ -97,10 +98,8 @@ export const SubMenuListItem = styled.li`
 `;
 
 export const SubMenuItem = styled(Link)<{ active?: string }>`
-  display: block;
-  padding: 8px 0 8px 55px;
   color: ${theme.palette.primary.main};
-  border-bottom: ${({ active }) => (active ? "2px solid #DDD7E3" : "none")};
+  border-bottom: ${({ active }) => (active ? "3px solid #DDD7E3" : "none")};
   font-size: 18px;
   text-decoration: none;
 
@@ -114,4 +113,8 @@ export const SubMenuItem = styled(Link)<{ active?: string }>`
 export const LogoItem = styled.li`
   padding: 12px 0 0 30px;
   margin-bottom: 30px;
+
+  @media ${device.smallTablet} {
+    padding: 30px 0 0 30px;
+  }
 `;

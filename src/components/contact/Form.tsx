@@ -79,17 +79,6 @@ const Form: React.FC = () => {
               onChange={(e) => setQuery(e.target.value)}
               onBlur={handleQueryBlur}
               required
-              style={{
-                padding: "5px 10px",
-                width: 450,
-                maxWidth: 450,
-                minWidth: 450,
-                height: 150,
-                maxHeight: 250,
-                backgroundColor: "#fff",
-                fontFamily: "CircularXXWeb-Regular, sans-serif",
-                // placeholderColor: "#c4c4c4",
-              }}
             />
             {queryError && (
               <ValidationMessage>Please enter your query.</ValidationMessage>

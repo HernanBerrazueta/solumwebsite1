@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Column, Container, Heading } from "./Squares.styled";
+import { Column, Container, Heading, Passage } from "./Squares.styled";
 import { squareData } from "./data";
 
 const Squares: React.FC = () => {
@@ -28,7 +28,7 @@ const Squares: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <Heading>{title}</Heading>
-            <p>{paragraph}</p>
+            <Passage>{paragraph}</Passage>
           </Link>
         </Column>
       ))}

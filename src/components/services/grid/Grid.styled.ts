@@ -3,16 +3,16 @@ import { Box } from "@mui/material";
 import theme from "../../../theme";
 import { device } from "../../../utils/device";
 
-export const GridItem = styled(Box)<{ $ishovered: string; $isOdd?: boolean }>`
-  background-color: ${({ $ishovered }) =>
-    $ishovered ? "#f0ecf3" : theme.palette.primary.main};
+export const GridItem = styled(Box)<{ ishovered: string; $isOdd?: boolean }>`
+  background-color: ${({ ishovered }) =>
+    ishovered ? "#f0ecf3" : theme.palette.primary.main};
   border-radius: 5px;
   border: 5px solid #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ $ishovered }) =>
-    $ishovered ? theme.palette.primary.main : "#f0ecf3"};
+  color: ${({ ishovered }) =>
+    ishovered ? theme.palette.primary.main : "#f0ecf3"};
   position: relative;
   width: 100%;
   padding-bottom: 100%;
@@ -92,5 +92,13 @@ export const GridContainer = styled(Box)`
 
   @media ${device.ultraLarge} {
     grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+  }
+`;
+
+export const HoverItem = styled.p<{ $ishover?: boolean }>`
+  line-height: 1;
+
+  &:not(:last-child) {
+    margin-bottom: ${({ $ishover }) => ($ishover ? "15px" : "0")};
   }
 `;

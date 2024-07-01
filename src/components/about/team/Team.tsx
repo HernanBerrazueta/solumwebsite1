@@ -54,7 +54,7 @@ const TeamComponent: React.FC = () => {
 
   return (
     <BackgroundContainer container>
-      <TeamMemberTitle>Meet the Senior Team</TeamMemberTitle>
+      <TeamMemberTitle>Meet the leadership</TeamMemberTitle>
       <TeamGrid container>
         {team.map((item) => (
           <BoxItem

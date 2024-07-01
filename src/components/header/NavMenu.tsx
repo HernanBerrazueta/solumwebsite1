@@ -7,6 +7,7 @@ import {
   DropdownMenu,
   DropdownItem,
   DropdownItemWithIcon,
+  BlurWrapper,
 } from "./Header.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
@@ -14,10 +15,10 @@ import { FadeInAnimation } from "../animations/animations";
 import useMatchMedia from "../../hooks/useMediaQuery";
 import BurgerMenu from "./mobileMenu/BurgerMenu";
 import useScrollLock from "../../hooks/useScrollLock";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // Import the icon
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const NavMenu: React.FC = () => {
-  const { isMobile } = useMatchMedia();
+  const { isMobile, isTablet } = useMatchMedia();
   const location = useLocation();
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
   // const [setShowInsightsDropdown] = useState(false);
@@ -44,17 +45,9 @@ const NavMenu: React.FC = () => {
     setShowServicesDropdown(false);
   };
 
-  // const handleInsightsMouseEnter = () => {
-  //   setShowInsightsDropdown(true);
-  // };
-
-  // const handleInsightsMouseLeave = () => {
-  //   setShowInsightsDropdown(false);
-  // };
-
   return (
     <>
-      {!isMobile ? (
+      {!isMobile && !isTablet ? (
         <Nav>
           <NavList>
             <NavLinkStyled
@@ -95,10 +88,7 @@ const NavMenu: React.FC = () => {
               {showServicesDropdown && (
                 <FadeInAnimation $delay="0.03s">
                   <DropdownMenu data-menu="services">
-                    <DropdownItem to="/consultancy">Consultancy</DropdownItem>
-                    <DropdownItem to="/dispute-services">
-                      Dispute Services
-                    </DropdownItem>
+                    <BlurWrapper />
                     <DropdownItemWithIcon
                       to="https://www.xplainfinancial.com/"
                       target="_blank"
@@ -109,14 +99,15 @@ const NavMenu: React.FC = () => {
                         style={{ fontSize: "0.75em" }}
                       />
                     </DropdownItemWithIcon>
+                    <DropdownItem to="/consultancy">Consultancy</DropdownItem>
+                    <DropdownItem to="/dispute-services">
+                      Dispute Services
+                    </DropdownItem>
                   </DropdownMenu>
                 </FadeInAnimation>
               )}
             </div>
-            <div
-            // onMouseEnter={handleInsightsMouseEnter}
-            // onMouseLeave={handleInsightsMouseLeave}
-            >
+            <div>
               <NavLinkStyled
                 to="/insights/publications"
                 active={
@@ -128,14 +119,6 @@ const NavMenu: React.FC = () => {
               >
                 Insights
               </NavLinkStyled>
-              {/* {showInsightsDropdown && (
-            <DropdownMenu data-menu="insights">
-              <DropdownItem to="/insights/news">News</DropdownItem>
-              <DropdownItem to="/insights/publications">
-                Publications
-              </DropdownItem>
-            </DropdownMenu>
-          )} */}
             </div>
             <NavLinkStyled
               to="/about"

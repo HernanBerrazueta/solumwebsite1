@@ -51,7 +51,7 @@ export const ImageStyled = styled.img<HasAnimationProps>`
   width: 250px;
   max-height: ${({ $hasanimation }) => ($hasanimation ? "70px" : "85px")};
   object-fit: contain;
-  margin: ${({ $hasanimation }) => ($hasanimation ? "0 20px" : "0")};
+  margin: 0px;
 `;
 
 export const BannerWrapper = styled.div<HasAnimationProps>`
@@ -71,6 +71,7 @@ export const BannerWrapper = styled.div<HasAnimationProps>`
 export const BannerWrapperContainer = styled.div<HasAnimationProps>`
   height: ${({ $hasanimation }) => ($hasanimation ? "160px" : "100%")};
   width: 100%;
+  background-color: #fff;
   overflow-x: hidden;
   padding: 10px 0;
   display: flex;

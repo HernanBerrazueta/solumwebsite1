@@ -111,13 +111,15 @@ const BurgerMenu: React.FC<BurgerProps> = ({
               <SubMenu>
                 {servicesPages.map(({ to, label }) => (
                   <SubMenuListItem key={label}>
-                    <SubMenuItem
-                      to={to}
-                      active={location.pathname === to ? "true" : undefined}
-                      onClick={handleLinkClick}
-                    >
-                      {label}
-                    </SubMenuItem>
+                    <div style={{ padding: "8px 0 8px 55px" }}>
+                      <SubMenuItem
+                        to={to}
+                        active={location.pathname === to ? "true" : undefined}
+                        onClick={handleLinkClick}
+                      >
+                        {label}
+                      </SubMenuItem>
+                    </div>
                   </SubMenuListItem>
                 ))}
               </SubMenu>
@@ -126,13 +128,15 @@ const BurgerMenu: React.FC<BurgerProps> = ({
               <SubMenu>
                 {insightsPages.map(({ to, label }) => (
                   <SubMenuListItem key={label}>
-                    <SubMenuItem
-                      to={to}
-                      active={location.pathname === to ? "true" : undefined}
-                      onClick={handleLinkClick}
-                    >
-                      {label}
-                    </SubMenuItem>
+                    <div style={{ padding: "8px 0 8px 55px" }}>
+                      <SubMenuItem
+                        to={to}
+                        active={location.pathname === to ? "true" : undefined}
+                        onClick={handleLinkClick}
+                      >
+                        {label}
+                      </SubMenuItem>
+                    </div>
                   </SubMenuListItem>
                 ))}
               </SubMenu>

@@ -15,9 +15,9 @@ export const burgerMenuItems = [
 ];
 
 export const servicesPages = [
+  { to: "https://www.xplainfinancial.com/", label: "Xplain" },
   { to: "/consultancy", label: "Consultancy" },
   { to: "/dispute-services", label: "Dispute Services" },
-  { to: "https://www.xplainfinancial.com/", label: "Xplain" },
 ];
 export const insightsPages = [
   // { to: "/insights/news", label: "News" },
@@ -39,7 +39,13 @@ export const StyledHeader = styled.header`
   }
 
   @media ${device.smallTablet} {
-    padding: 50px 70px;
+    justify-content: space-between;
+    padding: 50px 30px;
+    align-items: flex-start;
+  }
+  @media ${device.tablet} {
+    padding: 50px 30px;
+    align-items: center;
   }
 
   @media ${device.desktop} {
@@ -55,13 +61,8 @@ export const LogoWrapper = styled(Link)`
 `;
 
 export const LogoImage = styled.img`
-  @media ${device.mobileOnly} {
-    // width: 80%;
+  @media ${device.mobile} {
     width: 240px;
-  }
-
-  @media ${device.smallTablet} {
-    width: 70%;
   }
 
   @media ${device.tablet} {
@@ -84,11 +85,6 @@ export const Nav = styled.nav`
 
   @media ${device.smallTablet} {
     width: 20%;
-    // margin-right: 20%;
-  }
-
-  @media ${device.tablet} {
-    // margin-right: 13%;
   }
 `;
 
@@ -100,7 +96,6 @@ export const NavList = styled.div`
 
   @media ${device.mobileOnly} {
     display: none;
-    // gap: 20px;
   }
 
   @media ${device.smallTablet} {
@@ -109,12 +104,13 @@ export const NavList = styled.div`
 
   @media ${device.desktop} {
     gap: 70px;
+  }
 `;
 
 export const NavLinkStyled = styled(NavLink)<NavLinkProps>`
   display: inline-block;
   font-family: "CircularXXWeb-Regular", sans-serif;
-  background-color: #fff;
+  background-color: ${theme.palette.text.primary};
   color: ${theme.palette.primary.main};
   border-bottom: ${({ active }) => (active ? "4px solid #DDD7E3" : "none")};
   margin-bottom: -4px;
@@ -130,12 +126,13 @@ export const NavLinkStyled = styled(NavLink)<NavLinkProps>`
 
 export const DropdownMenu = styled.div`
   position: absolute;
-  background-color: #f0edf3b3;
+  background-color: rgba(240, 237, 243, 0.95);
+  backdrop-filter: blur(15px);
   display: flex;
   flex-direction: column;
   min-width: 160px;
   z-index: 1;
-  box-shadow: 8px 8px 11px -7px rgba(0, 0, 0, 0.7);
+  box-shadow: 8px 8px 11px -7px ${theme.palette.primary.main};
 
   @media ${device.mobileOnly} {
     &[data-menu="services"] {
@@ -178,12 +175,30 @@ export const DropdownMenu = styled.div`
   }
 `;
 
+export const BlurWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+`;
+
+export const DropdownContent = styled.div`
+  position: relative;
+  z-index: 2;
+  background-color: #f0edf3b3;
+  padding: 10px;
+`;
+
 export const DropdownItem = styled(NavLink)`
+  position: relative;
   color: ${theme.palette.primary.main};
   text-decoration: none;
   padding: 10px;
   outline: 0.5px solid #0000001c;
   transition: background-color 0.3s ease;
+  z-index: 2;
 
   &:hover {
     background-color: #ded8e4e6;

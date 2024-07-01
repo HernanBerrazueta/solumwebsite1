@@ -29,7 +29,6 @@ const Grid: React.FC = () => {
     hoverTextData = consultancyHoverTexts;
   }
 
-  // Split the data into two rows
   const firstRowData = squareTextData.slice(0, 4);
   const secondRowData = squareTextData.slice(4);
 

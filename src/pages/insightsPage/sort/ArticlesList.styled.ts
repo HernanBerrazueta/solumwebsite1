@@ -50,6 +50,10 @@ export const ArticleImage = styled.img`
   border: 0.75px solid #302353;
   max-height: 360px;
   width: 260px;
+
+  @media ${device.smallTablet} {
+    width: 220px;
+  }
 `;
 
 export const ArticleTitle = styled.h3`
@@ -82,6 +86,9 @@ export const ButtonGroup = styled.div`
     background-color: #fff;
     display: block;
     text-align: center;
+  }
+  @media ${device.tablet} {
+    padding-left: 30px;
   }
 `;
 

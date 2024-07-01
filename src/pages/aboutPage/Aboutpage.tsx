@@ -1,14 +1,9 @@
 import { useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 import ImageText from "../../components/homepage/ImageText/ImageText";
-// import TextImage from "../../components/homepage/TextImage/TextImage";
-// import PromiseComponent from "../../components/about/promise/Promise";
 import TeamComponent from "../../components/about/team/Team";
 import Carousel from "../../components/homepage/carousel/Carousel";
-import {
-  // Container,
-  TopContainer,
-} from "../../components/services/Services.styled";
+import { TopContainer } from "../../components/services/Services.styled";
 import {
   aboutPageCarouselTitle,
   aboutPageCarouselData,
@@ -24,13 +19,7 @@ const AboutPage: React.FC = () => {
       <TopContainer style={{ marginBottom: 50 }}>
         <ImageText />
       </TopContainer>
-      {/* <Container>
-        <TextImage />
-      </Container> */}
       <Carousel data={aboutPageCarouselData} title={aboutPageCarouselTitle} />
-      {/* <Container>
-        <PromiseComponent />
-      </Container> */}
       <TeamComponent />
       <Footer />
     </>

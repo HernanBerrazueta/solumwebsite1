@@ -9,7 +9,7 @@ export const promiseData: Data[] = [
     alt: "Services Page",
     title: "Core expertise",
     description:
-      "Our team members are senior professionals with extensive experience in tier-one banks, having led successful business lines in various areas such as quantitative modeling, trading, structuring, and risk management, all related to financial derivatives.",
+      "Every member of our team brings extensive experience in leadership roles at tier-one banks, having led departments in all areas relating to derivatives including quantitative modelling, trading, structuring and risk management.",
   },
   {
     alt: "About Page",
@@ -21,6 +21,6 @@ export const promiseData: Data[] = [
     alt: "Dispute Page",
     title: "Our expert network",
     description:
-      "With decades of experience in major banking institutions, we have built a strong in-house team and a broad network of experts across all financial asset classes and products. Leveraging our long standing relationships with law firms, we can assist in determining whether high level or deep dive analysis is most relevant, and produce expert reports accordingly that ensure best outcome alongside cost efficiency.",
+      "Solum’s deep in-house expertise is augmented by a broad network of outside specialists with experience across all financial asset classes and products. Add to this our long-standing relationships with law firms, and we’re perfectly placed to help determine whether high-level or deep-dive analysis is most relevant, and produce expert reports that ensure the best outcomes and minimum costs.",
   },
 ];
