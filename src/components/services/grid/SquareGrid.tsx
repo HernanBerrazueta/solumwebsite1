@@ -2,8 +2,8 @@ import React from "react";
 import { GridItem, GridItemContent, HoverItem } from "./Grid.styled";
 
 interface SquareGridProps {
-  text: string;
-  hoverText: string;
+  text: TextObject;
+  hoverText: HoverTextObject;
   index: number;
   hoveredIndex: number | null;
   setHoveredIndex: (index: number | null) => void;
@@ -11,8 +11,15 @@ interface SquareGridProps {
 
 type TextObject = {
   item1: string;
-  item2: string;
-  item3: string;
+  item2?: string;
+  item3?: string;
+};
+
+type HoverTextObject = {
+  item1: string;
+  item2?: string;
+  item3?: string;
+  item4?: string;
 };
 
 const SquareGrid: React.FC<SquareGridProps> = ({
@@ -24,7 +31,10 @@ const SquareGrid: React.FC<SquareGridProps> = ({
 }) => {
   const isHovered = hoveredIndex === index;
 
-  const renderText = (textObj: TextObject, isHover: boolean) => {
+  const renderText = (
+    textObj: TextObject | HoverTextObject,
+    isHover: boolean
+  ) => {
     return Object.values(textObj).map((item, idx) =>
       item ? (
         <HoverItem key={idx} $ishover={isHover}>

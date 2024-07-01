@@ -1,3 +1,12 @@
+// Define the types for the data
+type SquareTextData = { item1: string; item2?: string; item3?: string };
+type HoverTextData = {
+  item1: string;
+  item2?: string;
+  item3?: string;
+  item4?: string;
+};
+
 import React, { useState } from "react";
 import { GridContainer } from "./Grid.styled";
 import {
@@ -15,8 +24,8 @@ const Grid: React.FC = () => {
   const isConsultancyPage = location.pathname === "/consultancy";
   const isDisputePage = location.pathname === "/dispute-services";
 
-  let squareTextData: string[];
-  let hoverTextData: string[];
+  let squareTextData: SquareTextData[];
+  let hoverTextData: HoverTextData[];
 
   if (isConsultancyPage) {
     squareTextData = consultancySquareTexts;

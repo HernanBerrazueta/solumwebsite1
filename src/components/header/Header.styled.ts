@@ -126,8 +126,7 @@ export const NavLinkStyled = styled(NavLink)<NavLinkProps>`
 
 export const DropdownMenu = styled.div`
   position: absolute;
-  background-color: rgba(240, 237, 243, 0.95);
-  backdrop-filter: blur(15px);
+  background-color: rgba(240, 237, 243, 0.85);
   display: flex;
   flex-direction: column;
   min-width: 160px;
@@ -182,6 +181,12 @@ export const BlurWrapper = styled.div`
   right: 0;
   bottom: 0;
   z-index: 1;
+
+  backdrop-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -webkit-filter: blur(5px);
 `;
 
 export const DropdownContent = styled.div`
