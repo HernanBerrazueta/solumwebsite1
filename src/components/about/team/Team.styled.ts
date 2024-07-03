@@ -19,6 +19,9 @@ export const TeamGrid = styled(Grid)`
     flex-direction: column;
     padding: 50px 20px;
   }
+  @media ${device.ultraLarge} {
+    padding: 50px 0px;
+  }
 `;
 
 export const BoxItem = styled(Grid)`
@@ -57,17 +60,33 @@ export const TeamMemberTitle = styled.h2`
   padding: 50px 0 0;
   color: ${theme.palette.primary.main};
   font-size: 32px;
+
+  @media ${device.ultraLarge} {
+    font-size: 36px;
+  }
 `;
 export const TeamMemberName = styled.h4`
   color: #000;
   font-family: "CircularXXWeb-Medium", sans-serif;
+
+  @media ${device.ultraLarge} {
+    font-size: 24px;
+  }
 `;
 
 export const TeamMemberPosition = styled.p`
-  color: #000;
+  color: ${theme.palette.primary.main};
+
+  @media ${device.ultraLarge} {
+    font-size: 23px;
+  }
 `;
 
 export const ButtonText = styled.span`
   text-transform: none !important;
   font-family: "CircularXXWeb-Medium", sans-serif;
+
+  @media ${device.ultraLarge} {
+    font-size: 24px;
+  }
 `;

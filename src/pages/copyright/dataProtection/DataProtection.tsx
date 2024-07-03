@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Footer from "../../../components/footer/Footer";
 import { Container, Header, TextStyled } from "../cookies/Cookies.styled";
 import protectionPolicy from "../../../assets/dataProtectionPolicy/Solum Financial Data Protection Policy 2024.pdf";
-// const protectionPolicy = require("../../../assets/dataProtectionPolicy/Solum Financial Data Protection Policy 2024.pdf");
 
 const DataProtection: React.FC = () => {
   useEffect(() => {

@@ -3,7 +3,6 @@ import theme from "../../../theme";
 import { device } from "../../../utils/device";
 
 export const StyledCarousel = styled.div`
-  // background-color: ${theme.palette.text.primary};
   max-width: 100vw;
 `;
 
@@ -60,6 +59,9 @@ export const SlideContent = styled.div`
   @media ${device.tablet} {
     font-size: 22px;
   }
+  @media ${device.ultraLarge} {
+    font-size: 24px;
+  }
 
   & > :nth-child(2) {
     color: ${theme.palette.text.secondary};
@@ -90,6 +92,10 @@ export const Title = styled.h2<TitleProps>`
 
   @media ${device.mobileOnly} {
     padding-left: 20px;
+  }
+
+  @media ${device.ultraLarge} {
+    font-size: 36px;
   }
 
   ${({ formTitle }) =>

@@ -1,7 +1,6 @@
 @import "./assets/fonts/stylesheet.css";
 
 :root {
-  /* --background-image: url("../assets/images/homePage/Homepage Graphic.svg"); */
   font-family: "CircularXXWeb-Regular", Inter, system-ui, Avenir, Helvetica,
     Arial, sans-serif;
   line-height: 1.5;
@@ -10,11 +9,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  /* background-image: var(--background-image);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center; */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

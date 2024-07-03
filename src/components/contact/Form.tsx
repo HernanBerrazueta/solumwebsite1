@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import Button from "@mui/material/Button";
 import {
   Container,
@@ -20,9 +21,9 @@ const Form: React.FC = () => {
   const [queryError, setQueryError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [subjectError, setSubjectError] = useState(false);
-  const [submitted, setSubmitted] = useState(false); // State to track form submission
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (query.trim() === "" || email.trim() === "" || subject.trim() === "") {
       alert("Please fill in all fields.");
@@ -32,8 +33,34 @@ const Form: React.FC = () => {
       setEmailError(true);
       return;
     }
+    //
+    try {
+      const response = await axios.post(
+        "https://solum-sg-1143.twil.io/solum",
+        {
+          query: query,
+          email: email,
+          subject: subject,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
 
-    setSubmitted(true);
+      console.log("Email sent successfully:", response.data);
+
+      setSubmitted(true);
+
+      setQuery("");
+      setEmail("");
+      setSubject("");
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+    //
   };
 
   const isValidEmail = (email: string) => {
@@ -127,9 +154,7 @@ const Form: React.FC = () => {
                 subject.trim() === ""
               }
             >
-              <ButtonText style={{ minWidth: 90, fontSize: "14px" }}>
-                {formText}
-              </ButtonText>
+              <ButtonText>{formText}</ButtonText>
             </Button>
           </ButtonContainer>
         </form>

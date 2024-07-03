@@ -16,7 +16,7 @@ interface Data {
 export const imageData: Data[] = [
   {
     src: HomeHero,
-    alt: "Coast and Ocean",
+    alt: "Tunnel",
     title: "Dedicated to derivatives",
     subtitle:
       "Derivatives are complex, but they need not be opaque or daunting",
@@ -25,7 +25,7 @@ export const imageData: Data[] = [
   },
   {
     src: AboutHero,
-    alt: "River flows through the rocks",
+    alt: "Modern Tunnel",
     title: "Our approach",
     subtitle:
       "Individually and collectively, we’re committed to being the very best at what we do. Which is why we invest in long-term relationship and trust building.",
@@ -34,7 +34,7 @@ export const imageData: Data[] = [
   },
   {
     src: ConsultancyHero,
-    alt: "River",
+    alt: "Tunnel with huge arch",
     title: "Consultancy",
     subtitle:
       "Over the past 15 years, Solum has executed over a hundred advisory mandates. In every instance, we’ve helped clients to cut through the complexity associated with derivatives, to exert greater control over their holdings, and to reduce their risk.",
@@ -43,7 +43,7 @@ export const imageData: Data[] = [
   },
   {
     src: DisputeHero,
-    alt: "Curved River",
+    alt: "Ancient Tunnel",
     title: "Dispute Services",
     subtitle:
       "Legal teams come to Solum for a variety of reasons. Sometimes it’s when they’re assessing the overall merits of a case or looking to augment their understanding of best practice or loss quantification.",
@@ -53,7 +53,7 @@ export const imageData: Data[] = [
   },
   {
     src: InsightsHero,
-    alt: "Tunnel",
+    alt: "Road tunnel",
     title: "Insights",
     subtitle: "",
     text: "Discover expert insights and in-depth analysis on derivatives landscape through our insights page.",

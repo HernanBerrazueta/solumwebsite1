@@ -26,10 +26,6 @@ export const Input = styled.input`
   position: relative;
 
   &::placeholder {
-    // position: absolute;
-    // top: 7px;
-    // left: 10px;
-    // bottom: 20px;
     color: #c4c4c4;
   }
 

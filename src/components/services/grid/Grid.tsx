@@ -1,12 +1,3 @@
-// Define the types for the data
-type SquareTextData = { item1: string; item2?: string; item3?: string };
-type HoverTextData = {
-  item1: string;
-  item2?: string;
-  item3?: string;
-  item4?: string;
-};
-
 import React, { useState } from "react";
 import { GridContainer } from "./Grid.styled";
 import {
@@ -17,6 +8,14 @@ import {
 } from "./data";
 import { useLocation } from "react-router-dom";
 import SquareGrid from "./SquareGrid";
+
+type SquareTextData = { item1: string; item2?: string; item3?: string };
+type HoverTextData = {
+  item1: string;
+  item2?: string;
+  item3?: string;
+  item4?: string;
+};
 
 const Grid: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);

@@ -23,6 +23,9 @@ export const Title = styled.h2`
   @media ${device.mobileOnly} {
     padding: 40px 20px;
   }
+  @media ${device.ultraLarge} {
+    font-size: 36px;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -37,6 +40,9 @@ export const ContentContainer = styled.div`
   }
   @media ${device.smallTablet} {
     padding: 0 20px;
+  }
+  @media ${device.ultraLarge} {
+    font-size: 24px;
   }
 `;
 
@@ -59,8 +65,9 @@ export const Image = styled.img`
   height: auto;
   transform: scale(1);
   transition: all 0.3s ease-out;
+  cursor: pointer;
 
-  &: hover {
+  &:hover {
     transform: scale(1.03);
     box-shadow: 0 2px 4px rgba(40, 41, 61, 0.04),
       0 8px 16px rgba(96, 97, 112, 0.16);
@@ -79,6 +86,10 @@ export const TextContainer = styled.div`
 export const Paragraph = styled.p`
   margin: 0;
   color: ${theme.palette.primary.main};
+
+  @media ${device.ultraLarge} {
+    font-size: 24px;
+  }
 `;
 
 export const ButtonContainer = styled.div<{
@@ -103,7 +114,7 @@ export const ButtonContainer = styled.div<{
     `}
 
   & > Button {
-    font-size: 1.2rem;
+    font-size: 14px;
     border-radius: 7px;
     border: none;
 

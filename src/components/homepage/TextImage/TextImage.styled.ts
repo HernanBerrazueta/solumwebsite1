@@ -4,7 +4,6 @@ import { device } from "../../../utils/device";
 
 export const Container = styled.div`
   display: flex;
-  // background-color: ${theme.palette.text.primary};
   color: ${theme.palette.primary.main};
   width: 100%;
 
@@ -39,11 +38,19 @@ export const Container = styled.div`
   h1 {
     font-size: 32px;
     text-align: left;
+
+    @media ${device.ultraLarge} {
+      font-size: 36px;
+    }
   }
 
   p {
     font-size: 22px;
     text-align: left;
+
+    @media ${device.ultraLarge} {
+      font-size: 24px;
+    }
   }
 
   h1,

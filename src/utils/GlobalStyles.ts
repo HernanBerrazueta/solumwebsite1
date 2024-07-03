@@ -4,11 +4,6 @@ import aboutImage from "/squiggles/About Us Graphic.svg";
 import consultancyImage from "/squiggles/Consultancy Graphic.svg";
 import disputeServicesImage from "/squiggles/Dispute Services Graphic.svg";
 import insightsImage from "/squiggles/Insights Graphic.svg";
-// import homeImage from "../assets/images/squiggles/Homepage Graphic.svg";
-// import aboutImage from "../assets/images/squiggles/About Us Graphic.svg";
-// import consultancyImage from "../assets/images/squiggles/Consultancy Graphic.svg";
-// import disputeServicesImage from "../assets/images/squiggles/Dispute Services Graphic.svg";
-// import insightsImage from "../assets/images/squiggles/Insights Graphic.svg";
 
 interface GlobalStylesProps {
   path: string;
@@ -78,7 +73,6 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   }
 
   address {
-    /* by default address italic */
     font-style: normal;
   }
 `;

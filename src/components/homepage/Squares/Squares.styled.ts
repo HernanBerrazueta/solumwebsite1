@@ -11,8 +11,6 @@ export const Container = styled.div`
   gap: 50px;
   margin: 70px 0;
   font-size: 22px;
-  // line-height: 1.6;
-  // background-color: ${theme.palette.text.primary};
 
   @media ${device.mobile} {
     flex-direction: column;
@@ -35,6 +33,7 @@ export const Container = styled.div`
 
   @media ${device.ultraLarge} {
     max-width: 2480px;
+    font-size: 24px;
   }
 `;
 
@@ -42,7 +41,6 @@ export const CommonStyles = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   text-align: center;
   color: ${theme.palette.text.primary};
 
@@ -93,7 +91,7 @@ export const Passage = styled.p`
   line-height: 1;
 
   @media ${device.ultraLarge} {
-    font-size: 28px;
+    font-size: 24px;
   }
 `;
 
@@ -119,9 +117,6 @@ export const Column = styled(CommonStyles)<ColumnProps>`
     justify-content: center;
   }
 
-  @media ${device.smallTablet} {
-    // height: calc(33h - 40px);
-  }
   @media ${device.tablet} {
     min-height: 300px;
   }

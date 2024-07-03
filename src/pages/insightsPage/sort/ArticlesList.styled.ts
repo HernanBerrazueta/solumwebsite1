@@ -57,6 +57,10 @@ export const ArticleImage = styled.img`
   @media ${device.tablet} {
     width: 260px;
   }
+  @media ${device.ultraLarge} {
+    width: 360px;
+    max-height: 560px;
+  }
 `;
 
 export const ArticleTitle = styled.h3`
@@ -67,6 +71,10 @@ export const ArticleTitle = styled.h3`
   @media ${device.mobileOnly} {
     margin: 0;
   }
+  @media ${device.ultraLarge} {
+    max-width: 360px;
+    font-size: 24px;
+  }
 `;
 
 export const ArticleDescription = styled.p`
@@ -76,6 +84,10 @@ export const ArticleDescription = styled.p`
 
   @media ${device.mobileOnly} {
     margin: 0;
+  }
+  @media ${device.ultraLarge} {
+    max-width: 360px;
+    font-size: 24px;
   }
 `;
 
@@ -92,6 +104,9 @@ export const ButtonGroup = styled.div`
   }
   @media ${device.tablet} {
     padding-left: 30px;
+  }
+  @media ${device.ultraLarge} {
+    font-size: 24px;
   }
 `;
 

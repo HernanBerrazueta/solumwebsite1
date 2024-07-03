@@ -39,6 +39,9 @@ export const GridItem = styled(Box)<{ ishovered: string; $isOdd?: boolean }>`
     @media ${device.desktop} {
       font-size: 20px;
     }
+    @media ${device.ultraLarge} {
+      font-size: 24px;
+    }
   }
 
   &:hover > .grid-item-content {
@@ -92,6 +95,7 @@ export const GridContainer = styled(Box)`
 
   @media ${device.ultraLarge} {
     grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+    font-size: 24px;
   }
 `;
 

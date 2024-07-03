@@ -13,18 +13,23 @@ import { insightsData, buttonText } from "./data";
 import ButtonComponent from "../../../common/Button";
 
 const Insights: React.FC = () => {
+  const handleImageClick = (pdf: string) => {
+    window.open(pdf, "_blank");
+  };
+
   return (
     <Container>
       <TitleContainer>
         <Title>Our Insights</Title>
       </TitleContainer>
       <ContentContainer>
-        {insightsData.map(({ image, title, description }, index) => (
+        {insightsData.map(({ image, title, description, pdf }, index) => (
           <ImageContainer key={description}>
             <Image
               src={image}
               alt={description}
               style={index === 0 ? { border: "1px solid #302353" } : {}}
+              onClick={() => handleImageClick(pdf)}
             />
             <TextContainer>
               <Paragraph

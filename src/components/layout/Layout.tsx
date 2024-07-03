@@ -23,7 +23,7 @@ const Layout: React.FC = () => {
   return (
     <>
       {showBtn && <ScrollBtn handleScrollToTop={handleScrollToTop} />}
-      <Suspense /*fallback={<div>Loading...</div>}*/>
+      <Suspense>
         <Header />
         <Outlet />
       </Suspense>

@@ -22,6 +22,10 @@ export const Title = styled.h1`
   background-color: #fff;
   font-size: 32px;
   color: ${theme.palette.primary.main};
+
+  @media ${device.ultraLarge} {
+    font-size: 36px;
+  }
 `;
 
 export const Description = styled.p`
@@ -29,4 +33,8 @@ export const Description = styled.p`
   max-width: 100vw;
   color: ${theme.palette.primary.main};
   font-size: 22px;
+
+  @media ${device.ultraLarge} {
+    font-size: 24px;
+  }
 `;

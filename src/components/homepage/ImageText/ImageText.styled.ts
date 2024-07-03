@@ -31,10 +31,6 @@ export const Container = styled.div`
       padding: 0 20px;
     }
 
-    // @media ${device.tablet} {
-    //   padding: 0 50px;
-    // }
-
     @media ${device.desktop} {
       padding: 0 60px;
     }
@@ -42,10 +38,6 @@ export const Container = styled.div`
     @media ${device.ultraLarge} {
       padding: 0 190px;
     }
-  }
-
-  & > div {
-    // max-width: 25%;
   }
 
   h1,
@@ -87,7 +79,6 @@ export const TextColumn = styled.div`
 `;
 
 export const FlexWrap = styled.div`
-  // display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -101,6 +92,10 @@ export const TitleStyled = styled.h1`
   font-size: 32px;
   text-align: left !important;
   background-color: #fff;
+
+  @media ${device.ultraLarge} {
+    font-size: 36px;
+  }
 `;
 
 export const TextStyled = styled.p`
@@ -112,6 +107,10 @@ export const TextStyled = styled.p`
   }
   @media ${device.tablet} {
     font-size: 22px;
+  }
+
+  @media ${device.ultraLarge} {
+    font-size: 24px;
   }
 `;
 

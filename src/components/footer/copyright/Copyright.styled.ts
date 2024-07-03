@@ -12,7 +12,7 @@ export const policies = [
   { title: "Diversity and Inclusion", to: "/diversity_inclusion" },
 ];
 export const office =
-  "Solum Financial Limited is a limited liability company registered in England and Wales with registered number: 9050223 and Registered office: at 43-45 Dorset Street, 2F, London, W1U 7NA.";
+  "Solum Financial Limited is a limited liability company registered in England and Wales with registered number: 9050223 and registered office: at 43-45 Dorset Street, 2F, London, W1U 7NA.";
 
 export const copyright =
   "Copyright \u00A9 2024 Solum Financial Limited | All Rights Reserved.";
@@ -62,7 +62,6 @@ export const PolicyLink = styled(Link)`
   }
 
   @media ${device.mobileOnly} {
-    // display: block;
     min-width: 240px;
     text-align: left;
     padding: 0 20px;

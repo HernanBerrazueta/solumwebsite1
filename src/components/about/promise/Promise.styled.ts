@@ -25,9 +25,17 @@ export const StyledHeading = styled.h2`
   font-family: CircularXXWeb-Medium, sans-serif;
   display: inline-block;
   white-space: nowrap;
+
+  @media ${device.ultraLarge} {
+    font-size: 36px;
+  }
 `;
 
 export const StyledParagraph = styled.p`
   font-size: 22px;
   background-color: #fff;
+
+  @media ${device.ultraLarge} {
+    font-size: 24px;
+  }
 `;
