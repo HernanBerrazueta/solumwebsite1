@@ -52,6 +52,11 @@ export const StyledHeader = styled.header`
     padding: 50px 70px;
     font-size: 20px;
   }
+
+  @media ${device.ultraLarge} {
+    max-width: 2788px;
+    margin: 0 auto;
+  }
 `;
 
 export const LogoWrapper = styled(Link)`
@@ -62,7 +67,7 @@ export const LogoWrapper = styled(Link)`
 
 export const LogoImage = styled.img`
   @media ${device.mobile} {
-    width: 240px;
+    width: 220px;
   }
 
   @media ${device.tablet} {

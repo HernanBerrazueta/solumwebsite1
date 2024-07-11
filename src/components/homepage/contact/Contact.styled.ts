@@ -14,6 +14,11 @@ export const ContactContainer = styled.div`
   @media ${device.desktop} {
     padding: 50px 70px;
   }
+
+  @media ${device.ultraLarge} {
+    max-width: 2788px;
+    margin: 0 auto;
+  }
 `;
 
 export const Title = styled.h1`

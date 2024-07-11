@@ -59,7 +59,6 @@ export const TextStyled = styled(MainTextStyled)`
   color: ${theme.palette.primary.main};
   width: 100%;
   max-width: 100%;
-  font-weight: 500;
   margin: 40px 0 0;
 `;
 export const Container = styled.div`
@@ -124,7 +123,6 @@ export const LiStyled = styled.li`
   background-color: #fff;
   color: ${theme.palette.primary.main};
   width: 100%;
-  font-weight: 500;
 
   & > p {
     margin-top: 0;

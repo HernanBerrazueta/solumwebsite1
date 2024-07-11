@@ -8,6 +8,7 @@ export const Container = styled.div`
   width: 100%;
   position: relative;
   z-index: 1;
+  min-height: calc(100vh - 433px);
 
   & > :first-child {
     @media ${device.mobile} {

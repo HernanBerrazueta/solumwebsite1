@@ -40,7 +40,9 @@ const Carousel: React.FC<Data> = ({ data, title }) => {
 
   return (
     <StyledCarousel>
-      <Title>{title}</Title>
+      <Title style={{ display: title === "" ? "none" : "block" }}>
+        {title}
+      </Title>
       <CarouselWrapper>
         <Splide options={splideOptions} ref={splideRef}>
           {data.map((slide, index) => (

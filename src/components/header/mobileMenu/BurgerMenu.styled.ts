@@ -78,7 +78,6 @@ export const MenuItem = styled(Link)<{ active?: string }>`
   width: 100%;
   color: ${theme.palette.primary.main};
   font-size: 20px;
-  font-weight: 600;
   text-decoration: none;
   border-bottom: ${({ active }) => (active ? "3px solid #DDD7E3" : "none")};
   transition-duration: 0.25s;

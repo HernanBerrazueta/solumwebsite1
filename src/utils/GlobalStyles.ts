@@ -27,7 +27,6 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   @font-face {
     font-family: "CircularXXWeb-Regular", sans-serif;
     src: url("/src/assets/fonts/CircularXXWeb-Regular.woff") format("woff");
-    font-weight: normal;
     font-style: normal;
   }
 
@@ -37,7 +36,6 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
 
   body {
     font-family: "CircularXXWeb-Regular", sans-serif;
-    font-weight: normal;
     font-style: normal;
     margin: 0;
     -webkit-font-smoothing: antialiased;

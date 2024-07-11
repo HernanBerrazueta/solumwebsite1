@@ -77,4 +77,9 @@ export const BannerWrapperContainer = styled.div<HasAnimationProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${device.ultraLarge} {
+    max-width: 2788px;
+    margin: 0 auto;
+  }
 `;

@@ -6,6 +6,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${device.ultraLarge} {
+    max-width: 2788px;
+    margin: 0 auto;
+  }
 `;
 
 export const TitleContainer = styled.div`

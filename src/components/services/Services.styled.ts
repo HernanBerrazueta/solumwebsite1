@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { device } from "../../utils/device";
 
+interface HeightProps {
+  $heroheight?: string;
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,15 +18,25 @@ export const Container = styled.div`
   @media ${device.smallTablet} {
     padding: 50px 30px 0;
   }
+
+  @media ${device.ultraLarge} {
+    max-width: 2788px;
+    margin: 0 auto;
+  }
 `;
 
-export const TopContainer = styled(Container)`
+export const TopContainer = styled(Container)<HeightProps>`
   padding-top: 0px;
 
   @media ${device.mobile} {
-    height: 100%;
+    // height: 100%;
   }
+
   @media ${device.desktop} {
-    height: calc(100vh - 130px);
+    height: ${({ $heroheight }) => $heroheight};
+  }
+
+  @media ${device.ultraLarge} {
+    height: ${({ $heroheight }) => $heroheight};
   }
 `;
