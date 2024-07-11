@@ -47,7 +47,8 @@ export const CommonStyles = styled.div`
   @media ${device.mobileOnly} {
     min-height: 230px;
     max-height: 230px;
-    padding: 20px;
+    padding: 10px;
+    // padding: 20px;
   }
 
   @media ${device.smallTablet} {
@@ -74,8 +75,10 @@ export const CommonStyles = styled.div`
 export const Heading = styled.h3`
   font-family: "CircularXXWeb-Medium", sans-serif;
   font-size: 24px;
-  margin-bottom: 50px;
 
+  @media ${device.mobileOnly} {
+    margin-bottom: 10px;
+  }
   @media ${device.smallTablet} {
     margin-bottom: 20px;
   }

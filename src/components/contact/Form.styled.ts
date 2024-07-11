@@ -41,7 +41,7 @@ export const Input = styled.input`
   }
 
   @media ${device.mobileOnly} {
-    width: 335px;
+    width: 280px;
   }
   @media ${device.smallTablet} {
     min-width: 350px;
@@ -77,9 +77,9 @@ export const TextAreaStyled = styled.textarea`
   }
 
   @media ${device.mobile} {
-    width: 335px;
-    max-width: 335px;
-    min-width: 335px;
+    width: 280px;
+    max-width: 280px;
+    min-width: 280px;
 
     height: 100px;
     max-height: 150px;

@@ -37,23 +37,33 @@ const Text: React.FC<TextProps> = ({
       <FadeInAnimation $delay="0s">
         <TitleStyled style={{ maxWidth: 800 }}>{title}</TitleStyled>
       </FadeInAnimation>
-      <FadeInAnimation $delay="0.1s">
+      <FadeInAnimation
+        $delay="0.1s"
+        style={{
+          display: isContactPage ? "flex" : "block",
+          alignItems: isContactPage ? "baseline" : undefined,
+        }}
+      >
+        {showIcons && isContactPage && (
+          <FontAwesomeIcon style={{ marginRight: 15 }} icon={faEnvelope} />
+        )}
         <TextStyled
           style={{ maxWidth: 800, padding: subtitle === "" ? 0 : undefined }}
         >
-          {showIcons && isContactPage && (
-            <FontAwesomeIcon style={{ marginRight: 10 }} icon={faEnvelope} />
-          )}
           {subtitle}
         </TextStyled>
       </FadeInAnimation>
-      <FadeInAnimation $delay="0.2s">
-        <TextStyled style={{ maxWidth: 800 }}>
-          {showIcons && isContactPage && (
-            <FontAwesomeIcon style={{ marginRight: 5 }} icon={faPhone} />
-          )}{" "}
-          {text}
-        </TextStyled>
+      <FadeInAnimation
+        $delay="0.2s"
+        style={{
+          display: isContactPage ? "flex" : "block",
+          alignItems: isContactPage ? "baseline" : undefined,
+        }}
+      >
+        {showIcons && isContactPage && (
+          <FontAwesomeIcon style={{ marginRight: 15 }} icon={faPhone} />
+        )}
+        <TextStyled style={{ maxWidth: 800 }}>{text}</TextStyled>
       </FadeInAnimation>
       <FadeInAnimation
         $delay="0.3s"

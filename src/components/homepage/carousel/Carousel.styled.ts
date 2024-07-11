@@ -16,6 +16,7 @@ export const CarouselWrapper = styled.div`
     margin-left: 50px;
 
     @media ${device.mobileOnly} {
+      left: 10px !important;
       margin-left: 0px;
     }
     @media ${device.smallTablet} {
@@ -27,6 +28,7 @@ export const CarouselWrapper = styled.div`
     margin-right: 50px;
 
     @media ${device.mobileOnly} {
+      right: 10px !important;
       margin-right: 0px;
     }
     @media ${device.smallTablet} {
@@ -50,7 +52,7 @@ export const SlideContent = styled.div`
 
   @media ${device.mobileOnly} {
     font-size: 12px;
-    padding: 20px 60px;
+    padding: 10px 50px;
   }
   @media ${device.smallTablet} {
     padding: 10px 110px;
