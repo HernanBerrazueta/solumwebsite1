@@ -25,6 +25,10 @@ export const Input = styled.input`
   line-height: 1.5;
   position: relative;
 
+  @media ${device.mobileOnly} {
+    margin-left: 20px;
+  }
+
   &::placeholder {
     color: #c4c4c4;
   }
@@ -74,6 +78,10 @@ export const TextAreaStyled = styled.textarea`
     outline: none;
     border-color: ${theme.palette.primary.main};
     box-shadow: none;
+  }
+
+  @media ${device.mobileOnly} {
+    margin-left: 20px;
   }
 
   @media ${device.mobile} {

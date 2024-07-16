@@ -103,11 +103,10 @@ export const ButtonContainer = styled.div<{
 }>`
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
   margin-top: 40px;
+  margin-bottom: 100px;
 
   @media ${device.mobileOnly} {
-    margin-bottom: 30px;
     margin-top: 40px;
   }
 
@@ -115,7 +114,12 @@ export const ButtonContainer = styled.div<{
     props.formbutton &&
     css`
       margin-top: 20px;
+      margin-bottom: 0 !important;
       justify-content: left;
+
+      @media ${device.mobileOnly} {
+        margin-bottom: 30px !important;
+      }
     `}
 
   & > Button {

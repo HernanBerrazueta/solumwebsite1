@@ -4,7 +4,6 @@ import { device } from "../../../utils/device";
 
 export const StyledCarousel = styled.div`
   max-width: 100vw;
-  background-color: ${theme.palette.primary.main};
 
   @media ${device.ultraLarge} {
     background: linear-gradient(
@@ -19,6 +18,7 @@ export const CarouselWrapper = styled.div`
   position: relative;
   text-align: center;
   width: 100%;
+  background-color: ${theme.palette.primary.main};
 
   .splide__arrow--prev {
     margin-left: 50px;
@@ -60,8 +60,6 @@ export const SlideContent = styled.div`
   height: 100%;
   padding: 100px 150px;
   margin: 0 auto;
-  // border-top: 5px solid #fff;
-  // border-bottom: 5px solid #fff;
 
   @media ${device.mobileOnly} {
     font-size: 12px;

@@ -148,6 +148,10 @@ const Form: React.FC = () => {
               variant="contained"
               color="primary"
               type="submit"
+              style={{
+                marginLeft: isMobile ? "20px" : "0",
+                marginBottom: isMobile ? "0" : "80px",
+              }}
               disabled={
                 query.trim() === "" ||
                 !isValidEmail(email) ||
