@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../../components/footer/Footer";
-import Xplain from "../../components/xplain/Xplain"; // Ensure the path is correct
+import Xplain from "../../components/xplain/Xplain";
 
 const XplainPage: React.FC = () => {
   return (

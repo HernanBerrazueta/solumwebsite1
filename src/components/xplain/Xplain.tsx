@@ -1,3 +1,4 @@
+import React from "react";
 import XplainLogo from "../../assets/logos/xplain.svg";
 import BackgroundImage from "../../assets/images/xplainPage/Xplain_Graphic Patterns-01_Transparent.svg";
 import FooterForm from "./FooterForm";
