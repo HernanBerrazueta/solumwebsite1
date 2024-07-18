@@ -3,7 +3,11 @@ import { Outlet } from "react-router-dom";
 import Header from "../header/Header";
 import ScrollBtn from "./scrollBtn/ScrollBtn";
 
-const Layout: React.FC = () => {
+interface LayoutProps {
+  hideHeader?: boolean;
+}
+
+const Layout: React.FC<LayoutProps> = ({ hideHeader }) => {
   const [showBtn, setShowBtn] = useState(false);
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -23,8 +27,8 @@ const Layout: React.FC = () => {
   return (
     <>
       {showBtn && <ScrollBtn handleScrollToTop={handleScrollToTop} />}
-      <Suspense>
-        <Header />
+      <Suspense fallback={<div>Loading...</div>}>
+        {!hideHeader && <Header />}
         <Outlet />
       </Suspense>
     </>
