@@ -40,7 +40,7 @@ const Carousel: React.FC<Data> = ({ data, title }) => {
 
   return (
     <StyledCarousel>
-      <Title style={{ display: title === "" ? "none" : "block" }}>
+      <Title style={{ display: title === "" ? "none" : "inline" }}>
         {title}
       </Title>
       <CarouselWrapper>

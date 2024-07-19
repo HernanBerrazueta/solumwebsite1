@@ -4,14 +4,7 @@ import { device } from "../../../utils/device";
 
 export const StyledCarousel = styled.div`
   max-width: 100vw;
-
-  @media ${device.ultraLarge} {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 1) 12%,
-      rgba(48, 35, 83, 1) 12%
-    );
-  }
+  margin-top: 50px;
 `;
 
 export const CarouselWrapper = styled.div`
@@ -19,6 +12,7 @@ export const CarouselWrapper = styled.div`
   text-align: center;
   width: 100%;
   background-color: ${theme.palette.primary.main};
+  margin-top: 50px;
 
   .splide__arrow--prev {
     margin-left: 50px;
@@ -47,6 +41,7 @@ export const CarouselWrapper = styled.div`
   @media ${device.ultraLarge} {
     max-width: 2788px;
     margin: 0 auto;
+    margin-top: 50px;
   }
 `;
 
@@ -63,10 +58,10 @@ export const SlideContent = styled.div`
 
   @media ${device.mobileOnly} {
     font-size: 12px;
-    padding: 10px 50px;
+    padding: 0px 50px;
   }
   @media ${device.smallTablet} {
-    padding: 10px 110px;
+    padding: 0px 110px;
     font-size: 18px;
   }
   @media ${device.tablet} {
@@ -95,23 +90,31 @@ interface TitleProps {
 
 export const Title = styled.h2<TitleProps>`
   font-family: "CircularXXWeb-Medium", sans-serif;
-  display: inline-block;
-  text-align: left;
-  color: ${theme.palette.primary.main};
-  margin: 50px 0;
-  padding-left: 70px;
   font-size: 32px;
-  background-color: #fff;
+  color: ${theme.palette.primary.main};
+  background-color: #ffffff;
+  display: inline-block;
+  margin: 50px 70px;
 
   @media ${device.mobileOnly} {
-    padding-left: 20px;
+    font-size: 28px;
+    margin: 30px 20px;
+  }
+
+  @media ${device.smallTablet} {
+    margin: 50px 30px;
+  }
+
+  @media ${device.tablet} {
+    margin: 50px 30px;
+  }
+
+  @media ${device.desktop} {
+    margin: 50px 70px;
   }
 
   @media ${device.ultraLarge} {
-    font-size: 36px;
-    max-width: 2788px;
-    margin: 50px auto;
-    background-color: #fff;
+    font-size: 36px !important;
   }
 
   ${({ formTitle }) =>

@@ -9,6 +9,7 @@ import {
   Title,
   Paragraph,
   BackgroundImageContainer,
+  NoView,
 } from "./Xplain.styled";
 
 const Xplain: React.FC = () => {
@@ -16,18 +17,20 @@ const Xplain: React.FC = () => {
   const btnColor = "#302353";
 
   return (
-    <LandingPageContainer>
-      <BackgroundImageContainer>
-        <img src={BackgroundImage} alt="Background" />
-      </BackgroundImageContainer>
-      <ComingSoonText>Coming soon...</ComingSoonText>
-      <Logo src={XplainLogo} alt="Logo" />
-      <Title>Dedicated to derivatives</Title>
-      <Paragraph>
-        Sign up to be the first to know when we launch our new website:
-      </Paragraph>
-      <FooterForm bgColor={bgColor} btnColor={btnColor} />
-    </LandingPageContainer>
+    <NoView>
+      <LandingPageContainer>
+        <BackgroundImageContainer>
+          <img src={BackgroundImage} alt="Xplain theme" />
+        </BackgroundImageContainer>
+        <ComingSoonText>Coming soon...</ComingSoonText>
+        <Logo src={XplainLogo} alt="Xplain logo" />
+        <Title>Dedicated to derivatives</Title>
+        <Paragraph>
+          Sign up to be the first to know when we launch our new website:
+        </Paragraph>
+        <FooterForm bgColor={bgColor} btnColor={btnColor} />
+      </LandingPageContainer>
+    </NoView>
   );
 };
 

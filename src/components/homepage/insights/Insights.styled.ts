@@ -21,13 +21,29 @@ export const TitleContainer = styled.div`
 
 export const Title = styled.h2`
   font-family: "CircularXXWeb-Medium", sans-serif;
-  padding: 40px 70px;
   font-size: 32px;
   color: ${theme.palette.primary.main};
+  background-color: #ffffff;
+  display: inline;
+  margin: 50px 70px;
 
   @media ${device.mobileOnly} {
-    padding: 40px 20px;
+    font-size: 28px;
+    margin: 30px 20px;
   }
+
+  @media ${device.smallTablet} {
+    margin: 50px 30px;
+  }
+
+  @media ${device.tablet} {
+    margin: 50px 30px;
+  }
+
+  @media ${device.desktop} {
+    margin: 50px 70px;
+  }
+
   @media ${device.ultraLarge} {
     font-size: 36px;
   }
