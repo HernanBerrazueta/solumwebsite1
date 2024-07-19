@@ -89,7 +89,7 @@ const NavMenu: React.FC = () => {
                 <FadeInAnimation $delay="0.03s">
                   <DropdownMenu data-menu="services">
                     <BlurWrapper />
-                    <DropdownItemWithIcon to="/xplain" target="_blank">
+                    <DropdownItemWithIcon to="/xplain">
                       Xplain
                       <FontAwesomeIcon
                         icon={faExternalLinkAlt}
