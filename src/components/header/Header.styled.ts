@@ -15,7 +15,7 @@ export const burgerMenuItems = [
 ];
 
 export const servicesPages = [
-  { to: "/xplain", label: "Xplain" },
+  { to: "https://www.xplainfinancial.com/", label: "Xplain" },
   { to: "/consultancy", label: "Consultancy" },
   { to: "/dispute-services", label: "Dispute Services" },
 ];

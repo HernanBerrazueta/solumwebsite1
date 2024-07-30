@@ -5,7 +5,6 @@ import { StyleSheetManager } from "styled-components";
 import GlobalStyles from "../src/utils/GlobalStyles";
 
 const HomePage = lazy(() => import("./pages/homePage/HomePage"));
-const XplainPage = lazy(() => import("./pages/xplainPage/XplainPage"));
 const ConsultancyPage = lazy(
   () => import("./pages/servicesPage/ConsultancyPage")
 );
@@ -54,9 +53,6 @@ const App: React.FC = () => {
             path="/diversity_inclusion"
             element={<DiversityAndInclusion />}
           />
-        </Route>
-        <Route path="/xplain" element={<Layout hideHeader />}>
-          <Route index element={<XplainPage />} />
         </Route>
       </Routes>
     </StyleSheetManager>

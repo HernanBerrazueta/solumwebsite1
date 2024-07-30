@@ -1,4 +1,10 @@
-# React + TypeScript + Vite
+# Solum Website
+
+The solum website is hosted on AWS Amplify. The website can be accessed via the following
+URL: https://main.d1qnch80sh1wnb.amplifyapp.com. The website will be redeployed on updates to
+the `main` branch.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

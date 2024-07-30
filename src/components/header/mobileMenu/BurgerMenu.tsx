@@ -118,16 +118,35 @@ const BurgerMenu: React.FC<BurgerProps> = ({
                     <div style={{ padding: "8px 0 8px 55px" }}>
                       <SubMenuItem
                         to={to}
+                        target="_blank"
                         active={location.pathname === to ? "true" : undefined}
                         onClick={handleLinkClick}
                       >
                         {label}
                       </SubMenuItem>
                       {label === "Xplain" && (
-                        <FontAwesomeIcon
-                          icon={faExternalLinkAlt}
-                          style={{ fontSize: "medium", marginLeft: 10 }}
-                        />
+                        <a
+                          href={to}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            marginLeft: 10,
+                            display: "inline-flex",
+                            alignItems: "center",
+                            textDecoration: "none",
+                            color: "inherit",
+                          }}
+                        >
+                          <FontAwesomeIcon
+                            icon={faExternalLinkAlt}
+                            style={{
+                              fontSize: "medium",
+                              cursor: "pointer",
+                              color: "inherit",
+                              transition: "none",
+                            }}
+                          />
+                        </a>
                       )}
                     </div>
                   </SubMenuListItem>
