@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import theme from "../../../theme";
 import { device } from "../../../utils/device";
 
@@ -84,11 +84,7 @@ export const Paragraph = styled.p`
   margin: 25px 0;
 `;
 
-interface TitleProps {
-  formTitle?: boolean;
-}
-
-export const Title = styled.h2<TitleProps>`
+export const Title = styled.h2`
   font-family: "CircularXXWeb-Medium", sans-serif;
   font-size: 32px;
   color: ${theme.palette.primary.main};
@@ -116,11 +112,4 @@ export const Title = styled.h2<TitleProps>`
   @media ${device.ultraLarge} {
     font-size: 36px !important;
   }
-
-  ${({ formTitle }) =>
-    formTitle &&
-    css`
-      padding-left: 0;
-      margin: 60px 0 20px 0;
-    `}
 `;

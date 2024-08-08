@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import theme from "../../../theme";
 import { device } from "../../../utils/device";
 
@@ -114,7 +114,6 @@ export const Paragraph = styled.p`
 `;
 
 export const ButtonContainer = styled.div<{
-  formbutton?: string;
   isinsightspage?: string;
 }>`
   display: flex;
@@ -125,18 +124,6 @@ export const ButtonContainer = styled.div<{
   @media ${device.mobileOnly} {
     margin-top: 40px;
   }
-
-  ${(props) =>
-    props.formbutton &&
-    css`
-      margin-top: 20px;
-      margin-bottom: 0 !important;
-      justify-content: left;
-
-      @media ${device.mobileOnly} {
-        margin-bottom: 30px !important;
-      }
-    `}
 
   & > Button {
     font-size: 14px;
