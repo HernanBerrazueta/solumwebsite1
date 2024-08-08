@@ -1,7 +1,7 @@
 # Solum Website
 
 The solum website is hosted on AWS Amplify. The website can be accessed via the following
-URL: https://main.d1qnch80sh1wnb.amplifyapp.com. The website will be redeployed on updates to
+URL: https://solum-financial.com. The website will be redeployed on updates to
 the `main` branch.
 
 ## React + TypeScript + Vite
