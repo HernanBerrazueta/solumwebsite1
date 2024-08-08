@@ -1,6 +1,7 @@
-import { lazy } from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { lazy } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/layout/Layout";
+import { StyleSheetManager } from "styled-components";
 import GlobalStyles from "../src/utils/GlobalStyles";
 
 const HomePage = lazy(() => import("./pages/homePage/HomePage"));
@@ -27,8 +28,10 @@ const DataProtection = lazy(
 );
 
 const App: React.FC = () => {
+  const location = useLocation();
+
   return (
-    <>
+    <StyleSheetManager shouldForwardProp={(prop) => prop !== "formTitle"}>
       <GlobalStyles path={location.pathname} />
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -52,7 +55,7 @@ const App: React.FC = () => {
           />
         </Route>
       </Routes>
-    </>
+    </StyleSheetManager>
   );
 };
 

@@ -33,6 +33,7 @@ const Form: React.FC = () => {
       setEmailError(true);
       return;
     }
+    //
     try {
       const response = await axios.post(
         "https://solum-sg-1143.twil.io/solum",
@@ -59,6 +60,7 @@ const Form: React.FC = () => {
     } catch (error) {
       console.error("Error sending email:", error);
     }
+    //
   };
 
   const isValidEmail = (email: string) => {
@@ -92,7 +94,9 @@ const Form: React.FC = () => {
 
   return (
     <Container>
-      <Title style={{ maxWidth: 300 }}>Get in Touch</Title>
+      <Title formTitle style={{ maxWidth: 300 }}>
+        Get in Touch
+      </Title>
       {!submitted && (
         <form onSubmit={handleSubmit}>
           <Container>
@@ -107,7 +111,7 @@ const Form: React.FC = () => {
               <ValidationMessage>Please enter your query.</ValidationMessage>
             )}
           </Container>
-          <Container style={{ maxWidth: 0 }}>
+          <Container formcontainer="true">
             <Input
               type="email"
               placeholder="Enter your Email"
@@ -123,7 +127,7 @@ const Form: React.FC = () => {
               <ValidationMessage>Please enter a valid email.</ValidationMessage>
             )}
           </Container>
-          <Container style={{ maxWidth: 0 }}>
+          <Container formcontainer="true">
             <Input
               type="text"
               placeholder="Subject"
@@ -139,13 +143,7 @@ const Form: React.FC = () => {
               <ValidationMessage>Please enter the subject.</ValidationMessage>
             )}
           </Container>
-          <ButtonContainer
-            style={{
-              marginTop: "20px",
-              marginBottom: isMobile ? "30px" : "0px",
-              justifyContent: "left",
-            }}
-          >
+          <ButtonContainer formbutton="true">
             <Button
               variant="contained"
               color="primary"

@@ -7,7 +7,6 @@ import { ButtonText } from "../../about/team/Team.styled";
 import { buttonTextInsights } from "../../homepage/contact/data";
 import { FlexWrap, TextStyled, TitleStyled } from "./ImageText.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import useMatchMedia from "../../../hooks/useMediaQuery";
 import {
   faEnvelope,
   faPhone,
@@ -29,7 +28,6 @@ const Text: React.FC<TextProps> = ({
   subText,
   showIcons = false,
 }) => {
-  const { isMobile } = useMatchMedia();
   const location = useLocation();
   const isInsightsPage = location.pathname === "/insights/publications";
   const isContactPage = location.pathname === "/contact";
@@ -89,13 +87,7 @@ const Text: React.FC<TextProps> = ({
       </FadeInAnimation>
       {isInsightsPage && (
         <FadeInAnimation $delay="0.3s">
-          <ButtonContainer
-            style={{
-              marginTop: "20px",
-              marginBottom: isMobile ? "30px" : "0px",
-              justifyContent: "left",
-            }}
-          >
+          <ButtonContainer formbutton="true">
             <Link to="/contact">
               <Button
                 style={{ marginTop: 20 }}
